@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" font-family="DM Sans, Segoe UI, sans-serif">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B2447"/>
+      <stop offset="55%" stop-color="#123055"/>
+      <stop offset="100%" stop-color="#173F73"/>
+    </linearGradient>
+    <pattern id="grid4" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0 L0 0 0 40" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg4)"/>
+  <rect width="800" height="450" fill="url(#grid4)"/>
+
+  <text x="48" y="62" fill="#C8963E" font-size="13" letter-spacing="3" font-family="monospace">RESEARCH PAPER · PRESENTED</text>
+  <text x="48" y="104" fill="#FFFFFF" font-size="29" font-weight="700" font-family="Georgia, serif">Ethics of Creativity in the</text>
+  <text x="48" y="138" fill="#FFFFFF" font-size="29" font-weight="700" font-family="Georgia, serif">Age of Artificial Intelligence</text>
+  <line x1="48" y1="162" x2="752" y2="162" stroke="#FFFFFF" opacity="0.16" stroke-width="1"/>
+
+  <!-- venn: human / machine authorship -->
+  <g transform="translate(48,186)">
+    <rect width="352" height="214" rx="10" fill="#FFFFFF" opacity="0.055" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <text x="22" y="30" fill="#9FC0E3" font-size="12" letter-spacing="1.5" font-family="monospace">THE QUESTION</text>
+
+    <circle cx="140" cy="122" r="58" fill="#C8963E" opacity="0.30" stroke="#C8963E" stroke-opacity="0.7"/>
+    <circle cx="212" cy="122" r="58" fill="#5B8CBE" opacity="0.32" stroke="#9FC0E3" stroke-opacity="0.7"/>
+
+    <text x="102" y="127" fill="#F3E3C6" font-size="13" text-anchor="middle">Human</text>
+    <text x="250" y="127" fill="#DCE9F7" font-size="13" text-anchor="middle">Machine</text>
+    <text x="176" y="119" fill="#FFFFFF" font-size="11.5" text-anchor="middle" font-weight="700">Who</text>
+    <text x="176" y="134" fill="#FFFFFF" font-size="11.5" text-anchor="middle" font-weight="700">answers?</text>
+
+    <text x="176" y="196" fill="#CFE0F2" font-size="11.5" text-anchor="middle">Responsibility for co-created work</text>
+  </g>
+
+  <!-- themes -->
+  <g transform="translate(422,186)">
+    <rect width="330" height="214" rx="10" fill="#FFFFFF" opacity="0.055" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <text x="22" y="30" fill="#9FC0E3" font-size="12" letter-spacing="1.5" font-family="monospace">THEMES EXPLORED</text>
+
+    <rect x="22" y="48" width="132" height="26" rx="13" fill="#FFFFFF" opacity="0.09" stroke="#FFFFFF" stroke-opacity="0.2"/>
+    <text x="88" y="65" fill="#E4EEF9" font-size="12" text-anchor="middle">Moral co-creation</text>
+
+    <rect x="164" y="48" width="118" height="26" rx="13" fill="#FFFFFF" opacity="0.09" stroke="#FFFFFF" stroke-opacity="0.2"/>
+    <text x="223" y="65" fill="#E4EEF9" font-size="12" text-anchor="middle">Attribution</text>
+
+    <rect x="22" y="84" width="150" height="26" rx="13" fill="#FFFFFF" opacity="0.09" stroke="#FFFFFF" stroke-opacity="0.2"/>
+    <text x="97" y="101" fill="#E4EEF9" font-size="12" text-anchor="middle">Creative uncertainty</text>
+
+    <rect x="182" y="84" width="100" height="26" rx="13" fill="#FFFFFF" opacity="0.09" stroke="#FFFFFF" stroke-opacity="0.2"/>
+    <text x="232" y="101" fill="#E4EEF9" font-size="12" text-anchor="middle">Authorship</text>
+
+    <line x1="22" y1="132" x2="308" y2="132" stroke="#FFFFFF" stroke-opacity="0.14"/>
+
+    <text x="22" y="158" fill="#CFE0F2" font-size="12.5">National Seminar on Machine Learning</text>
+    <text x="22" y="178" fill="#CFE0F2" font-size="12.5">K.L. Mehta Dayanand College · DGHE approved</text>
+    <text x="22" y="198" fill="#EBC57F" font-size="12.5" font-family="monospace">FEBRUARY 2026</text>
+  </g>
+</svg>

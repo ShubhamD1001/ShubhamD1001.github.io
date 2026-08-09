@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" font-family="DM Sans, Segoe UI, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B2447"/>
+      <stop offset="55%" stop-color="#123055"/>
+      <stop offset="100%" stop-color="#173F73"/>
+    </linearGradient>
+    <linearGradient id="curve" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C8963E"/>
+      <stop offset="100%" stop-color="#E5B96C"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0 L0 0 0 40" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#grid)"/>
+
+  <text x="48" y="62" fill="#C8963E" font-size="13" letter-spacing="3" font-family="monospace">LEAD SCORING MODEL</text>
+  <text x="48" y="102" fill="#FFFFFF" font-size="30" font-weight="700" font-family="Georgia, serif">Logistic Regression · X Education</text>
+  <line x1="48" y1="126" x2="752" y2="126" stroke="#FFFFFF" opacity="0.16" stroke-width="1"/>
+
+  <!-- ROC curve panel -->
+  <g transform="translate(48,158)">
+    <rect width="330" height="242" rx="10" fill="#FFFFFF" opacity="0.055" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <text x="20" y="30" fill="#9FC0E3" font-size="12" letter-spacing="1.5" font-family="monospace">ROC CURVE</text>
+    <!-- axes -->
+    <line x1="34" y1="206" x2="300" y2="206" stroke="#FFFFFF" stroke-opacity="0.28"/>
+    <line x1="34" y1="206" x2="34" y2="52" stroke="#FFFFFF" stroke-opacity="0.28"/>
+    <!-- diagonal reference -->
+    <line x1="34" y1="206" x2="300" y2="52" stroke="#FFFFFF" stroke-opacity="0.2" stroke-dasharray="5 5"/>
+    <!-- curve, AUC 0.97 shape -->
+    <path d="M34 206 C 60 120, 96 74, 150 62 C 210 50, 268 54, 300 52"
+          fill="none" stroke="url(#curve)" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M34 206 C 60 120, 96 74, 150 62 C 210 50, 268 54, 300 52 L300 206 Z"
+          fill="#C8963E" opacity="0.12"/>
+    <text x="176" y="150" fill="#EBC57F" font-size="20" font-weight="700" font-family="Georgia, serif">AUC 0.97</text>
+    <text x="34" y="228" fill="#8FB0D4" font-size="10" font-family="monospace">FALSE POSITIVE RATE</text>
+  </g>
+
+  <!-- metrics panel -->
+  <g transform="translate(414,158)">
+    <rect width="338" height="242" rx="10" fill="#FFFFFF" opacity="0.055" stroke="#FFFFFF" stroke-opacity="0.14"/>
+
+    <text x="24" y="30" fill="#9FC0E3" font-size="12" letter-spacing="1.5" font-family="monospace">MODEL RESULTS</text>
+
+    <text x="24" y="76" fill="#C8963E" font-size="34" font-weight="700" font-family="Georgia, serif">9,240</text>
+    <text x="24" y="96" fill="#CFE0F2" font-size="12">leads scored, 37 raw columns</text>
+
+    <text x="188" y="76" fill="#C8963E" font-size="34" font-weight="700" font-family="Georgia, serif">~91%</text>
+    <text x="188" y="96" fill="#CFE0F2" font-size="12">classification accuracy</text>
+
+    <line x1="24" y1="120" x2="314" y2="120" stroke="#FFFFFF" stroke-opacity="0.14"/>
+
+    <text x="24" y="150" fill="#CFE0F2" font-size="13">Recommended threshold</text>
+    <text x="264" y="150" fill="#EBC57F" font-size="15" font-weight="700" font-family="monospace">65</text>
+
+    <text x="24" y="180" fill="#CFE0F2" font-size="13">Expected conversion at cutoff</text>
+    <text x="256" y="180" fill="#EBC57F" font-size="15" font-weight="700" font-family="monospace">~80%</text>
+
+    <text x="24" y="210" fill="#CFE0F2" font-size="13">Columns dropped (&gt;40% null)</text>
+    <text x="270" y="210" fill="#EBC57F" font-size="15" font-weight="700" font-family="monospace">21</text>
+  </g>
+
+  <text x="48" y="428" fill="#7E9CBE" font-size="11" font-family="monospace">SUMMARY GRAPHIC · FULL NOTEBOOK ON GITHUB</text>
+</svg>

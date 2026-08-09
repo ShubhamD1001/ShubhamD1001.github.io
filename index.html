@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ══════════════════════════════════════════════════════════════
+     EDIT: SEO — this is what Google shows in search results.
+     Replace shubhamd1001.github.io if you use a different URL.
+     ══════════════════════════════════════════════════════════════ -->
+<title>Shubham Dhyani | Business Analyst — Power BI, SQL, Python</title>
+<meta name="description" content="Shubham Dhyani — MBA (Business Analytics) at Manav Rachna University. Business analyst portfolio: Power BI dashboards, SQL analysis, predictive modelling, and primary research. Based in New Delhi, India.">
+<meta name="author" content="Shubham Dhyani">
+<link rel="canonical" href="https://shubhamd1001.github.io/">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Shubham Dhyani | Business Analyst">
+<meta property="og:description" content="MBA (Business Analytics). Turning messy data into decisions — Power BI, SQL, Python, primary research.">
+<meta property="og:url" content="https://shubhamd1001.github.io/">
+<meta property="og:image" content="https://shubhamd1001.github.io/images/profile.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230B2447'/><text y='70' x='50' text-anchor='middle' font-size='54' font-family='Georgia,serif' fill='%23C8963E'>SD</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy-900:#0B2447;
+  --navy-800:#0F2E57;
+  --navy-700:#173F73;
+  --navy-500:#1E5A96;
+  --navy-300:#5B8CBE;
+  --sky:#E8F0FA;
+  --gold:#C8963E;
+  --gold-soft:#F4E9D4;
+  --ink:#101828;
+  --muted:#5A6B80;
+  --border:#D8E2EE;
+  --paper:#FFFFFF;
+  --paper-off:#F5F8FC;
+  --ok:#1F8A5B;
+  --warn:#B4761A;
+  --shadow-sm:0 1px 2px rgba(11,36,71,.06), 0 4px 12px rgba(11,36,71,.05);
+  --shadow-md:0 8px 28px rgba(11,36,71,.10);
+  --shadow-lg:0 24px 60px rgba(11,36,71,.16);
+  --maxw:1160px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+body{
+  font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  background:var(--paper);color:var(--ink);
+  line-height:1.6;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--navy-500)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:3px}
+
+/* ── SHARED TYPE ── */
+.eyebrow{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold);font-weight:500;margin-bottom:.7rem;
+}
+.section-title{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:clamp(1.9rem,3.4vw,2.7rem);
+  font-weight:700;line-height:1.15;letter-spacing:-.5px;
+  color:var(--navy-900);margin-bottom:.8rem;
+}
+.section-desc{font-size:1rem;color:var(--muted);max-width:62ch;margin-bottom:3rem}
+.section-inner{max-width:var(--maxw);margin:0 auto;width:100%}
+section{padding:5.5rem 5%}
+.alt-bg{background:var(--paper-off);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  background:rgba(255,255,255,.93);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  padding:0 5%;height:68px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.nav-logo{
+  font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;
+  color:var(--navy-900);letter-spacing:-.3px;text-decoration:none;
+}
+.nav-logo span{color:var(--gold)}
+.nav-right{display:flex;align-items:center;gap:1.8rem}
+.nav-links{display:flex;gap:1.6rem;list-style:none}
+.nav-links a{
+  text-decoration:none;color:var(--muted);font-size:.87rem;font-weight:500;
+  padding:4px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;
+}
+.nav-links a:hover,.nav-links a.active{color:var(--navy-900);border-bottom-color:var(--gold)}
+.nav-cta{
+  background:var(--navy-900);color:#fff;text-decoration:none;
+  padding:9px 18px;border-radius:6px;font-size:.83rem;font-weight:600;
+  transition:background .2s,transform .2s;white-space:nowrap;
+}
+.nav-cta:hover{background:var(--navy-700);transform:translateY(-1px)}
+.nav-toggle{display:none;background:none;border:1px solid var(--border);border-radius:6px;padding:7px 10px;cursor:pointer;color:var(--navy-900);font-size:1.1rem;line-height:1}
+
+/* ── HERO ── */
+#hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding:110px 5% 70px;position:relative;overflow:hidden;
+  background:linear-gradient(140deg,#0B2447 0%,#123055 45%,#173F73 100%);
+  color:#fff;
+}
+.hero-grid-lines{
+  position:absolute;inset:0;opacity:.14;
+  background-image:linear-gradient(rgba(255,255,255,.28) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.28) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse 80% 70% at 70% 30%,#000 20%,transparent 75%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 70% at 70% 30%,#000 20%,transparent 75%);
+}
+.hero-inner{
+  max-width:var(--maxw);margin:0 auto;width:100%;position:relative;z-index:2;
+  display:grid;grid-template-columns:1.05fr .95fr;gap:4rem;align-items:center;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:9px;
+  background:rgba(200,150,62,.14);border:1px solid rgba(200,150,62,.45);
+  padding:6px 15px;border-radius:100px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.72rem;font-weight:500;color:#EBC57F;letter-spacing:.1em;
+  margin-bottom:1.4rem;text-transform:uppercase;
+}
+.hero-tag::before{content:'';width:7px;height:7px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 0 rgba(74,222,128,.6);animation:pulse 2.4s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
+#hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.6rem,5.6vw,4.2rem);line-height:1.05;
+  font-weight:700;letter-spacing:-1.5px;margin-bottom:1.1rem;
+}
+#hero h1 em{font-style:normal;color:var(--gold)}
+.hero-role{
+  font-family:'JetBrains Mono',monospace;font-size:.85rem;letter-spacing:.1em;
+  color:#9FC0E3;text-transform:uppercase;margin-bottom:1rem;
+}
+.hero-subtitle{font-size:1.06rem;color:#D6E4F5;font-weight:300;line-height:1.75;margin-bottom:1.8rem;max-width:52ch}
+.hero-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2.2rem}
+.chip{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+  padding:6px 14px;border-radius:100px;font-size:.8rem;font-weight:500;color:#E4EEF9;
+}
+.hero-cta{display:flex;gap:.9rem;flex-wrap:wrap}
+.btn-primary{
+  background:var(--gold);color:#231704;padding:13px 28px;border-radius:7px;
+  text-decoration:none;font-weight:700;font-size:.9rem;
+  display:inline-flex;align-items:center;gap:9px;
+  transition:transform .2s,box-shadow .2s,background .2s;
+  box-shadow:0 6px 20px rgba(200,150,62,.28);
+}
+.btn-primary:hover{background:#D9A64C;transform:translateY(-2px);box-shadow:0 10px 28px rgba(200,150,62,.36)}
+.btn-outline{
+  background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45);
+  padding:13px 28px;border-radius:7px;text-decoration:none;font-weight:600;font-size:.9rem;
+  display:inline-flex;align-items:center;gap:9px;transition:background .2s,border-color .2s;
+}
+.btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff}
+
+/* hero card */
+.hero-card{
+  background:rgba(255,255,255,.055);
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:14px;padding:1.8rem;
+  backdrop-filter:blur(10px);
+  box-shadow:var(--shadow-lg);
+}
+.hero-card-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:1.2rem;border-bottom:1px solid rgba(255,255,255,.16)}
+.avatar{
+  width:66px;height:66px;border-radius:50%;flex-shrink:0;
+  object-fit:cover;border:2px solid rgba(200,150,62,.6);
+  background:linear-gradient(135deg,var(--navy-500),var(--navy-300));
+}
+.avatar-fallback{
+  width:66px;height:66px;border-radius:50%;flex-shrink:0;
+  border:2px solid rgba(200,150,62,.6);
+  background:linear-gradient(135deg,var(--navy-500),var(--navy-300));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#fff;
+  letter-spacing:.5px;
+}
+.hero-card-header h3{font-size:1.02rem;font-weight:600;color:#fff;letter-spacing:-.2px}
+.hero-card-header p{font-size:.8rem;color:#A8C4E2;font-weight:300}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:1.6rem}
+.stat-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:.9rem .6rem;text-align:center}
+.stat-num{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;color:var(--gold);line-height:1.1}
+.stat-label{font-size:.7rem;color:#A8C4E2;margin-top:3px;letter-spacing:.03em}
+.evidence-list{display:flex;flex-direction:column;gap:.55rem}
+.evidence-row{
+  display:flex;gap:.9rem;align-items:baseline;
+  padding-bottom:.55rem;border-bottom:1px solid rgba(255,255,255,.09);
+}
+.evidence-row:last-child{border-bottom:none;padding-bottom:0}
+.ev-tool{
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.06em;
+  color:var(--gold);flex:0 0 78px;text-transform:uppercase;line-height:1.5;
+}
+.ev-proof{font-size:.81rem;color:#CFE0F2;line-height:1.5;font-weight:300}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3.5rem;align-items:start}
+.about-text p{color:#37475C;font-size:1.02rem;margin-bottom:1.2rem;line-height:1.8}
+.about-text strong{color:var(--navy-900);font-weight:600}
+.highlight-item{display:flex;gap:1rem;padding:1.1rem;background:var(--paper);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:8px;margin-bottom:.9rem;box-shadow:var(--shadow-sm)}
+.hi-icon{font-size:1.3rem;line-height:1.3;flex-shrink:0}
+.hi-text h4{font-size:.94rem;font-weight:600;color:var(--navy-900);margin-bottom:2px}
+.hi-text p{font-size:.85rem;color:var(--muted);line-height:1.55}
+
+/* ── SKILLS ── */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.2rem}
+.skill-card{background:var(--paper);border:1px solid var(--border);border-radius:10px;padding:1.5rem;transition:transform .22s,box-shadow .22s,border-color .22s}
+.skill-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--navy-300)}
+.skill-card h3{font-size:1rem;font-weight:600;color:var(--navy-900);margin-bottom:.9rem;display:flex;align-items:center;gap:.6rem}
+.skill-tags{display:flex;flex-wrap:wrap;gap:7px}
+.skill-tag{background:var(--sky);color:var(--navy-700);font-size:.79rem;font-weight:500;padding:5px 11px;border-radius:5px}
+
+/* ── PROJECTS ── */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.6rem}
+.project-card{background:var(--paper);border:1px solid var(--border);border-radius:11px;overflow:hidden;display:flex;flex-direction:column;transition:transform .22s,box-shadow .22s}
+.project-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.project-media{
+  aspect-ratio:16/9;background:var(--sky);position:relative;
+  border-bottom:1px solid var(--border);cursor:zoom-in;overflow:hidden;
+}
+.project-media img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.project-media img[src$=".svg"]{object-fit:contain;background:var(--navy-900)}
+.project-card:hover .project-media img{transform:scale(1.03)}
+.project-header{padding:1.3rem 1.4rem .4rem}
+.project-header h3{font-size:1.1rem;font-weight:600;color:var(--navy-900);letter-spacing:-.2px}
+.project-header .project-meta{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted);letter-spacing:.05em;margin-top:5px}
+.project-body{padding:.6rem 1.4rem 1.4rem;flex:1;display:flex;flex-direction:column}
+.par{margin-bottom:.75rem}
+.par-label{
+  font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--gold);font-weight:500;display:block;margin-bottom:2px;
+}
+.par p{font-size:.9rem;color:#41556C;line-height:1.62}
+.project-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:1rem}
+.project-tag{border:1px solid var(--border);color:var(--muted);font-size:.72rem;padding:3px 9px;border-radius:4px;background:var(--paper-off)}
+.project-links{display:flex;gap:1rem;margin-top:.9rem;flex-wrap:wrap}
+.project-links a{font-size:.83rem;font-weight:600;color:var(--navy-500);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+.project-links a:hover{border-bottom-color:var(--navy-500)}
+
+/* ── TIMELINE ── */
+.timeline{position:relative;padding-left:2.2rem;max-width:840px}
+.timeline::before{content:'';position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--gold),var(--border))}
+.timeline-item{position:relative;margin-bottom:1.6rem}
+.timeline-dot{position:absolute;left:-2.2rem;top:1.35rem;width:16px;height:16px;border-radius:50%;background:var(--paper);border:3px solid var(--gold);z-index:2}
+.timeline-card{background:var(--paper);border:1px solid var(--border);border-radius:10px;padding:1.3rem 1.5rem;box-shadow:var(--shadow-sm);transition:box-shadow .22s,transform .22s}
+.timeline-card:hover{box-shadow:var(--shadow-md);transform:translateX(3px)}
+.tl-meta{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:.35rem}
+.tl-org{font-family:'JetBrains Mono',monospace;font-size:.74rem;letter-spacing:.08em;color:var(--navy-500);text-transform:uppercase}
+.tl-date{font-family:'JetBrains Mono',monospace;font-size:.74rem;color:var(--muted)}
+.tl-title{font-size:1.03rem;font-weight:600;color:var(--navy-900);margin-bottom:.5rem}
+.tl-desc{font-size:.9rem;color:#41556C;line-height:1.68}
+.tl-desc li{margin-left:1.1rem;margin-bottom:.3rem}
+.proof-link{
+  display:inline-flex;align-items:center;gap:6px;margin-top:.9rem;cursor:pointer;
+  background:var(--gold-soft);border:1px solid #E4CDA0;color:#7A5613;
+  font-size:.78rem;font-weight:600;padding:5px 12px;border-radius:5px;
+  font-family:'DM Sans',sans-serif;transition:background .2s;
+}
+.proof-link:hover{background:#EEDFC0}
+
+/* draft/needs-input marker — delete these cards once filled in */
+.needs-input{border:1.5px dashed var(--warn);background:#FFFBF3}
+.needs-input-tag{
+  display:inline-block;background:var(--warn);color:#fff;font-size:.66rem;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;margin-bottom:.6rem;
+  font-family:'JetBrains Mono',monospace;
+}
+
+/* ── CERTIFICATES ── */
+.filter-bar{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2rem}
+.filter-btn{
+  background:var(--paper);border:1px solid var(--border);color:var(--muted);
+  font-family:'DM Sans',sans-serif;font-size:.83rem;font-weight:500;
+  padding:7px 16px;border-radius:100px;cursor:pointer;transition:all .2s;
+}
+.filter-btn:hover{border-color:var(--navy-300);color:var(--navy-700)}
+.filter-btn.active{background:var(--navy-900);border-color:var(--navy-900);color:#fff}
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:1.3rem}
+.cert-card{
+  background:var(--paper);border:1px solid var(--border);border-radius:10px;overflow:hidden;
+  display:flex;flex-direction:column;transition:transform .22s,box-shadow .22s;
+}
+.cert-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.cert-card.hidden{display:none}
+.cert-thumb{
+  aspect-ratio:4/3;background:var(--sky);position:relative;cursor:zoom-in;
+  border-bottom:1px solid var(--border);overflow:hidden;
+}
+.cert-thumb img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.cert-thumb::after{
+  content:'⤢';position:absolute;right:8px;bottom:8px;
+  width:26px;height:26px;border-radius:5px;background:rgba(11,36,71,.82);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:.85rem;
+  opacity:0;transition:opacity .2s;
+}
+.cert-card:hover .cert-thumb::after{opacity:1}
+.cert-body{padding:1rem 1.1rem 1.2rem;flex:1;display:flex;flex-direction:column}
+.cert-body h4{font-size:.92rem;font-weight:600;color:var(--navy-900);line-height:1.4;margin-bottom:4px}
+.cert-issuer{font-size:.81rem;color:var(--muted);flex:1}
+.cert-date{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--navy-500);margin-top:.7rem;letter-spacing:.04em}
+
+/* image placeholder when file is missing */
+.img-missing{
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  background:repeating-linear-gradient(45deg,#EDF3FA,#EDF3FA 10px,#E4EDF7 10px,#E4EDF7 20px);
+  cursor:default;
+}
+.img-missing img{display:none}
+.img-missing::before{
+  content:'Add image → ' attr(data-file);
+  font-family:'JetBrains Mono',monospace;font-size:.68rem;color:#7A8CA3;
+  padding:0 12px;line-height:1.5;word-break:break-all;
+}
+.img-missing::after{display:none}
+
+/* ── VOLUNTEERING ── */
+.vol-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.3rem}
+.vol-card{background:var(--paper);border:1px solid var(--border);border-radius:10px;padding:1.6rem;transition:transform .22s,box-shadow .22s}
+.vol-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.vol-emoji{font-size:1.7rem;margin-bottom:.7rem}
+.vol-card h3{font-size:1rem;font-weight:600;color:var(--navy-900);margin-bottom:.5rem}
+.vol-card p{font-size:.88rem;color:#41556C;line-height:1.65;margin-bottom:.9rem}
+.vol-tag{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--navy-500);letter-spacing:.04em}
+
+/* ── CONTACT ── */
+#contact{background:linear-gradient(140deg,#0B2447,#173F73);color:#fff;text-align:center}
+#contact .eyebrow{color:var(--gold)}
+#contact .section-title{color:#fff}
+#contact .lead{color:#CFE0F2;max-width:58ch;margin:0 auto 2.4rem;font-weight:300;font-size:1.04rem}
+.contact-links{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.contact-link{
+  display:inline-flex;align-items:center;gap:9px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.22);
+  color:#fff;text-decoration:none;padding:13px 26px;border-radius:7px;
+  font-size:.9rem;font-weight:500;transition:background .2s,transform .2s,border-color .2s;
+}
+.contact-link:hover{background:rgba(255,255,255,.14);border-color:var(--gold);transform:translateY(-2px)}
+.contact-note{margin-top:2.2rem;font-size:.82rem;color:#8FB0D4;font-family:'JetBrains Mono',monospace}
+
+footer{background:#071A34;color:#7E9CBE;text-align:center;padding:2rem 5%;font-size:.83rem}
+footer strong{color:#CFE0F2;font-weight:600}
+
+/* ── LIGHTBOX ── */
+.lightbox{
+  position:fixed;inset:0;z-index:500;background:rgba(7,20,38,.94);
+  display:none;align-items:center;justify-content:center;padding:3rem 5%;
+  backdrop-filter:blur(6px);
+}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:82vh;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.5);background:#fff}
+.lightbox-caption{position:absolute;bottom:1.6rem;left:0;right:0;text-align:center;color:#CFE0F2;font-size:.88rem;padding:0 2rem}
+.lightbox-close{
+  position:absolute;top:1.2rem;right:1.6rem;background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.3);color:#fff;width:42px;height:42px;border-radius:50%;
+  font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;
+}
+.lightbox-close:hover{background:rgba(255,255,255,.24)}
+
+/* ── ANIMATION ── */
+.fade-in{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  html{scroll-behavior:auto}
+  .fade-in{opacity:1;transform:none}
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr;gap:2.5rem}
+  .about-grid{grid-template-columns:1fr;gap:2rem}
+}
+@media(max-width:760px){
+  section{padding:4rem 6%}
+  #hero{padding:100px 6% 60px}
+  .nav-toggle{display:block}
+  .nav-links{
+    position:absolute;top:68px;left:0;right:0;flex-direction:column;gap:0;
+    background:#fff;border-bottom:1px solid var(--border);padding:.5rem 6%;
+    box-shadow:var(--shadow-md);display:none;
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{padding:.85rem 0;border-bottom:1px solid var(--border);width:100%}
+  .nav-links li:last-child a{border-bottom:none}
+  .nav-right{gap:.8rem}
+  .stat-grid{grid-template-columns:1fr 1fr}
+  .timeline{padding-left:1.8rem}
+  .timeline-dot{left:-1.8rem}
+  .hero-cta{width:100%}
+  .btn-primary,.btn-outline{flex:1;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════ NAV ══════════════ -->
+<nav>
+  <a href="#hero" class="nav-logo">Shubham Dhyani<span>.</span></a>
+  <div class="nav-right">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certificates">Credentials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <!-- EDIT: put your PDF at assets/Shubham_Dhyani_Resume.pdf -->
+    <a href="assets/Shubham_Dhyani_Resume.pdf" class="nav-cta" download>Download CV</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section id="hero">
+  <div class="hero-grid-lines" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-tag">Open to Analyst Internships</div>
+      <h1>Shubham<br><em>Dhyani</em></h1>
+      <p class="hero-role">Business Analyst · MBA Business Analytics</p>
+      <p class="hero-subtitle">
+        I turn messy, incomplete data into decisions people can act on — through
+        Power BI dashboards, SQL and Python analysis, and primary research that
+        starts with the business question, not the tool.
+      </p>
+      <div class="hero-chips">
+        <span class="chip">Power BI</span>
+        <span class="chip">SQL</span>
+        <span class="chip">Python</span>
+        <span class="chip">Tableau</span>
+        <span class="chip">Advanced Excel</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">See my work →</a>
+        <a href="#contact" class="btn-outline">Get in touch</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="hero-card-header">
+        <!-- EDIT: save your headshot as images/profile.jpg -->
+        <img src="images/profile.jpg" alt="Shubham Dhyani" class="avatar" data-fallback data-initials="SD">
+        <div>
+          <h3>Shubham Dhyani</h3>
+          <p>MBA (Business Analytics) · Manav Rachna University</p>
+        </div>
+      </div>
+      <div class="stat-grid">
+        <div class="stat-box"><div class="stat-num">9.17</div><div class="stat-label">MBA SGPA · Sem 2</div></div>
+        <div class="stat-box"><div class="stat-num">226</div><div class="stat-label">Companies analysed</div></div>
+        <div class="stat-box"><div class="stat-num">21K+</div><div class="stat-label">Records modelled</div></div>
+        <div class="stat-box"><div class="stat-num">15%</div><div class="stat-label">Revenue lift delivered</div></div>
+      </div>
+      <div class="evidence-list">
+        <div class="evidence-row"><span class="ev-tool">Power BI</span><span class="ev-proof">Two multi-page dashboards on star-schema models, built with DAX</span></div>
+        <div class="evidence-row"><span class="ev-tool">Python</span><span class="ev-proof">Logistic regression at 0.97 ROC-AUC; SciPy safety-stock model</span></div>
+        <div class="evidence-row"><span class="ev-tool">SQL &amp; Excel</span><span class="ev-proof">Live MySQL modelling; cleaning pipelines; GST &amp; inventory systems</span></div>
+        <div class="evidence-row"><span class="ev-tool">Research</span><span class="ev-proof">535-respondent primary study; paper presented at a national seminar</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ ABOUT ══════════════ -->
+<section id="about">
+  <div class="section-inner">
+    <p class="eyebrow">Who I am</p>
+    <h2 class="section-title">The question comes before the dashboard</h2>
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <p>I'm <strong>Shubham Dhyani</strong>, an MBA (Business Analytics) student at Manav Rachna University. My route here ran through B.Com at the University of Delhi and a year running operations and accounts for a family catering business — where I learned that most data problems are really process problems.</p>
+        <p>My work sits at the front end of analytics: framing the business question, cleaning what's actually there rather than what should be, and building the dashboard or model that answers it. That's meant two multi-page <strong>Power BI dashboards</strong> built on star-schema models — one over 226 companies, one connected live to a MySQL database — a <strong>lead scoring model at 0.97 ROC-AUC</strong>, a statistical <strong>safety-stock optimiser</strong> over 12,000 order lines, and a <strong>535-respondent research study</strong> I worked on as a student researcher at the University of Delhi. All four technical projects are public on GitHub, cleaning logs and documentation included.</p>
+        <p>I'm looking for <strong>business analyst and data analyst internships</strong> where I can work on real datasets alongside people who'll tell me when I'm wrong.</p>
+      </div>
+      <div class="about-highlights fade-in">
+        <div class="highlight-item">
+          <div class="hi-icon">📊</div>
+          <div class="hi-text"><h4>Builds and publishes</h4><p>Four documented analytics projects on GitHub — Power BI dashboards, an ML model and an optimisation pipeline</p></div>
+        </div>
+        <div class="highlight-item">
+          <div class="hi-icon">🔬</div>
+          <div class="hi-text"><h4>Primary research</h4><p>Survey design, faculty interviews and qualitative coding on a 535-respondent university study</p></div>
+        </div>
+        <div class="highlight-item">
+          <div class="hi-icon">📝</div>
+          <div class="hi-text"><h4>Research presenter</h4><p>Presented a paper on AI ethics at a national seminar, K.L. Mehta College, 2026</p></div>
+        </div>
+        <div class="highlight-item">
+          <div class="hi-icon">🏛️</div>
+          <div class="hi-text"><h4>Innovation Ambassador</h4><p>MoE's Innovation Cell &amp; AICTE, 2025–2026</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SKILLS ══════════════ -->
+<section id="skills" class="alt-bg">
+  <div class="section-inner">
+    <p class="eyebrow">Capabilities</p>
+    <h2 class="section-title">Skills &amp; tools</h2>
+    <p class="section-desc">Grouped by what they're actually used for, not by logo count.</p>
+    <div class="skills-grid">
+      <div class="skill-card fade-in">
+        <h3>📈 Business intelligence</h3>
+        <div class="skill-tags"><span class="skill-tag">Power BI</span><span class="skill-tag">DAX</span><span class="skill-tag">Power Query (M)</span><span class="skill-tag">Star schema modelling</span><span class="skill-tag">Tableau</span><span class="skill-tag">Excel dashboards</span></div>
+      </div>
+      <div class="skill-card fade-in">
+        <h3>🗄️ Data &amp; querying</h3>
+        <div class="skill-tags"><span class="skill-tag">MySQL</span><span class="skill-tag">Joins &amp; aggregations</span><span class="skill-tag">Data cleaning pipelines</span><span class="skill-tag">Data management</span></div>
+      </div>
+      <div class="skill-card fade-in">
+        <h3>🐍 Analysis &amp; modelling</h3>
+        <div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">Pandas</span><span class="skill-tag">NumPy</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">SciPy</span><span class="skill-tag">Logistic regression</span><span class="skill-tag">EDA</span><span class="skill-tag">SPSS</span></div>
+      </div>
+      <div class="skill-card fade-in">
+        <h3>🔍 Business analysis</h3>
+        <div class="skill-tags"><span class="skill-tag">Requirement framing</span><span class="skill-tag">Process optimisation</span><span class="skill-tag">Case analysis</span><span class="skill-tag">Project documentation</span><span class="skill-tag">Executive summaries</span></div>
+      </div>
+      <div class="skill-card fade-in">
+        <h3>🧪 Research methods</h3>
+        <div class="skill-tags"><span class="skill-tag">Survey design</span><span class="skill-tag">Primary research</span><span class="skill-tag">Secondary research</span><span class="skill-tag">Qualitative coding</span></div>
+      </div>
+      <div class="skill-card fade-in">
+        <h3>🤖 AI-assisted workflow</h3>
+        <div class="skill-tags"><span class="skill-tag">Prompt engineering</span><span class="skill-tag">AI for Excel</span><span class="skill-tag">Research synthesis</span><span class="skill-tag">Git &amp; GitHub</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     PROJECTS
+     To add a project: copy one .project-card block and edit it.
+     Screenshot goes in images/projects/ — 16:9 works best.
+     ══════════════════════════════════════════════════════════════ -->
+<section id="projects">
+  <div class="section-inner">
+    <p class="eyebrow">Selected work</p>
+    <h2 class="section-title">Projects</h2>
+    <p class="section-desc">Dashboards, models and research studies built end to end — from the raw data through to the decision someone could make from it. Code and documentation are public.</p>
+
+    <div class="projects-grid">
+
+      <!-- ═══ PROJECT 1 — Capital Structure Dashboard ═══ -->
+      <article class="project-card fade-in">
+        <div class="project-media" data-lightbox data-src="images/projects/capital-structure.jpg" data-caption="Capital Structure &amp; Financial Performance Dashboard — the live Power BI report">
+          <img src="images/projects/capital-structure.svg" alt="Capital structure dashboard overview" loading="lazy" data-fallback>
+        </div>
+        <div class="project-header">
+          <h3>Capital Structure &amp; Financial Performance Dashboard</h3>
+          <p class="project-meta">Power BI · DAX · Power Query · Python (pandas)</p>
+        </div>
+        <div class="project-body">
+          <div class="par"><span class="par-label">Problem</span><p>Comparing how 226 large-cap companies are financed is near-impossible in a flat file with dozens of columns per company. Analysts couldn't see which firms were funded efficiently and which carried heavy debt against what they actually earn.</p></div>
+          <div class="par"><span class="par-label">Approach</span><p>Cleaned the raw financials in Python — standardised currency to millions, flagged negative-equity and incomplete rows — then restructured the flat file into a star schema in Power Query (fact table plus company, industry and margin-stage dimensions). Built five DAX measures for leverage, weighted EBITDA margin, market D/E and capital efficiency, each wrapped in <code>DIVIDE()</code> to fail safely on zero denominators.</p></div>
+          <div class="par"><span class="par-label">Outcome</span><p>One view showing the relationship between leverage and profitability: a scatter of leverage against capital efficiency, EBITDA margin ranked by industry, and a waterfall tracing gross margin down to net margin — which links interest costs directly back to capital structure. Full cleaning log published alongside the model.</p></div>
+          <div class="project-tags"><span class="project-tag">Power BI</span><span class="project-tag">DAX</span><span class="project-tag">Star schema</span><span class="project-tag">Data modelling</span><span class="project-tag">Financial analysis</span></div>
+          <div class="project-links"><a href="https://github.com/ShubhamD1001/capital-structure-dashboard" target="_blank" rel="noopener">View repository →</a></div>
+        </div>
+      </article>
+
+      <!-- ═══ PROJECT — Sales & Inventory Dashboard ═══ -->
+      <article class="project-card fade-in">
+        <div class="project-media" data-lightbox data-src="images/projects/sales-inventory.jpg" data-caption="Sales &amp; Inventory Analytics Dashboard — the live Power BI report">
+          <img src="images/projects/sales-inventory.svg" alt="Sales and inventory dashboard overview" loading="lazy" data-fallback>
+        </div>
+        <div class="project-header">
+          <h3>Sales &amp; Inventory Analytics Dashboard</h3>
+          <p class="project-meta">Power BI · MySQL · DAX · Power Query</p>
+        </div>
+        <div class="project-body">
+          <div class="par"><span class="par-label">Problem</span><p>Sales, product, order and payment data sat across seven normalised tables in a MySQL database. Anyone wanting to know which products earn their shelf space, or which customers the business actually depends on, had to write queries to find out.</p></div>
+          <div class="par"><span class="par-label">Approach</span><p>Connected Power BI directly to the MySQL schema, modelled the tables into a star-schema relationship set, and built DAX measures for revenue, orders, customers and a zero-sales flag. Split the result into a three-page report — executive summary, sales &amp; revenue, product &amp; inventory — with cross-page navigation, global slicers and conditional formatting that flags low stock.</p></div>
+          <div class="par"><span class="par-label">Outcome</span><p>Three findings the business could act on: revenue is heavily back-loaded, with November and December alone contributing about 36% of the year. Two customers account for roughly 15% of all payments across a base of 122 — real concentration risk. And inventory is misaligned with demand: 555K units sitting in stock against 106K sold annually, yet the fastest-moving products are among the thinnest stocked.</p></div>
+          <div class="project-tags"><span class="project-tag">Power BI</span><span class="project-tag">MySQL</span><span class="project-tag">DAX</span><span class="project-tag">Inventory analysis</span><span class="project-tag">Revenue analysis</span></div>
+          <div class="project-links"><a href="https://github.com/ShubhamD1001/sales-inventory-analytics-dashboard" target="_blank" rel="noopener">View repository →</a></div>
+        </div>
+      </article>
+
+      <!-- ═══ PROJECT 2 — Lead Scoring ═══ -->
+      <article class="project-card fade-in">
+        <div class="project-media" data-lightbox data-caption="Lead Scoring Model — results summary (full notebook on GitHub)">
+          <img src="images/projects/lead-scoring.svg" alt="Lead scoring model results summary" loading="lazy" data-fallback>
+        </div>
+        <div class="project-header">
+          <h3>Predictive Lead Scoring Model</h3>
+          <p class="project-meta">Python · Scikit-learn · Pandas — X Education case study</p>
+        </div>
+        <div class="project-body">
+          <div class="par"><span class="par-label">Problem</span><p>An online education company converted only about 38% of its leads. The sales team had no way to tell which of 9,240 leads were worth calling first, and the raw data ran to 37 columns with heavy missing values.</p></div>
+          <div class="par"><span class="par-label">Approach</span><p>Dropped 21 columns above a 40% missing-value threshold, treated form non-responses as missing rather than as a category, and removed near-zero-variance flags with no predictive value. Encoded the remainder, scaled on the training split only to avoid leakage, and fitted a logistic regression that assigns each lead a 0–100 score.</p></div>
+          <div class="par"><span class="par-label">Outcome</span><p>~91% accuracy and 0.97 ROC-AUC. Threshold analysis pointed to a cutoff of 65, where the expected conversion rate on contacted leads is around 80%. Time spent on the website turned out to be the strongest single signal — an insight the marketing team can act on independently of the model.</p></div>
+          <div class="project-tags"><span class="project-tag">Logistic regression</span><span class="project-tag">EDA</span><span class="project-tag">Feature engineering</span><span class="project-tag">Threshold analysis</span></div>
+          <div class="project-links"><a href="https://github.com/ShubhamD1001/Customer_Segmentation_Analysis" target="_blank" rel="noopener">View repository →</a></div>
+        </div>
+      </article>
+
+      <!-- ═══ PROJECT 3 — Safety Stock Optimizer ═══ -->
+      <article class="project-card fade-in">
+        <div class="project-media" data-lightbox data-caption="Supplier Risk Matrix — results summary (full pipeline on GitHub)">
+          <img src="images/projects/safety-stock.svg" alt="Supplier risk matrix summary" loading="lazy" data-fallback>
+        </div>
+        <div class="project-header">
+          <h3>Inventory &amp; Supplier Reliability Optimiser</h3>
+          <p class="project-meta">Python · pandas · NumPy · SciPy · Tableau / Power BI</p>
+        </div>
+        <div class="project-body">
+          <div class="par"><span class="par-label">Problem</span><p>Stockouts come from two independent sources of uncertainty — customers ordering unpredictably, and suppliers delivering late. The common safety-stock formula ignores the second one, which systematically under-stocks whenever lead times are volatile.</p></div>
+          <div class="par"><span class="par-label">Approach</span><p>Built a pipeline over 12,000 order lines implementing the dual-variability formula, so demand risk and supplier delivery risk are modelled separately and their variances added. Rebuilt the demand series daily with zero-demand days reinserted, so the standard deviation isn't biased downward. Service level is a single config value, so the whole model can be rerun at 90%, 95% or 99%.</p></div>
+          <div class="par"><span class="par-label">Outcome</span><p>Safety stock, reorder point and a 2×2 supplier risk matrix per segment, exported BI-ready. The useful finding: for Furniture, most of the buffer exists because the supplier is unreliable, not because customers are unpredictable — which makes it a supplier conversation, not an inventory one.</p></div>
+          <div class="project-tags"><span class="project-tag">Statistical modelling</span><span class="project-tag">SciPy</span><span class="project-tag">Supply chain</span><span class="project-tag">Risk matrix</span></div>
+          <div class="project-links"><a href="https://github.com/ShubhamD1001/supplier-safety-stock-optimizer" target="_blank" rel="noopener">View repository →</a></div>
+        </div>
+      </article>
+
+      <!-- ═══ PROJECT 4 — Multiculturalism Research ═══ -->
+      <article class="project-card fade-in">
+        <div class="project-media" data-lightbox data-caption="Socio-Cultural Assimilation Research — study overview">
+          <img src="images/projects/research-study.svg" alt="Multiculturalism integration research — study summary" loading="lazy" data-fallback>
+        </div>
+        <div class="project-header">
+          <h3>Socio-Cultural Assimilation Research</h3>
+          <p class="project-meta">Student researcher · Survey design · Interviews · Mixed-methods analysis</p>
+        </div>
+        <div class="project-body">
+          <div class="par"><span class="par-label">Problem</span><p>Students in University of Delhi English classrooms were disengaging, and nobody could say why. The suspicion was that culturally distant texts were alienating students from diverse linguistic backgrounds — but there was no evidence either way.</p></div>
+          <div class="par"><span class="par-label">Approach</span><p>One of ten student researchers on an IQAC-funded innovation project led by Prof. Chhavi Sharma. Ran a pilot study first, then cut the student questionnaire from 35 questions to 14 after respondents flagged it as too long. Collected responses at scale by setting up a QR-code stall at the college gate, and interviewed 35 faculty members in 45-minute to 90-minute sessions. Analysed both quantitatively and qualitatively, then ran a classroom experiment with student-chosen topics.</p></div>
+          <div class="par"><span class="par-label">Outcome</span><p>Data from 500+ students and 35 faculty. The sharpest finding was a contradiction: most teachers reported no problem with the curriculum, while 78.9% of students said they struggled to express their thoughts and 85.8% feared being judged on their English. 71.6% preferred texts by Indian authors. The classroom experiment moved previously silent students into active participation.</p></div>
+          <div class="project-tags"><span class="project-tag">Primary research</span><span class="project-tag">Survey design</span><span class="project-tag">Qualitative coding</span><span class="project-tag">Mixed methods</span><span class="project-tag">Stakeholder interviews</span></div>
+          <div class="project-links">
+            <a href="assets/socio-cultural-assimilation-report.pdf" target="_blank" rel="noopener">Read the report →</a>
+            <a href="assets/socio-cultural-assimilation-report.pdf" download>Download PDF ↓</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ═══ PROJECT 5 — Research Paper ═══ -->
+      <article class="project-card fade-in">
+        <div class="project-media" data-lightbox data-caption="Ethics of Creativity in the Age of Artificial Intelligence — paper overview">
+          <img src="images/projects/research-paper.svg" alt="Ethics of Creativity in the Age of AI — research paper" loading="lazy" data-fallback>
+        </div>
+        <div class="project-header">
+          <h3>Ethics of Creativity in the Age of AI</h3>
+          <p class="project-meta">Research paper · K.L. Mehta College national seminar, 2026</p>
+        </div>
+        <div class="project-body">
+          <div class="par"><span class="par-label">Problem</span><p>Generative AI now produces work that closely resembles human creativity, unsettling authorship, responsibility, cultural representation and creative labour — while risking bias, appropriation and decontextualised output.</p></div>
+          <div class="par"><span class="par-label">Approach</span><p>Co-authored with Khyati (School of Business, Manav Rachna University) a paper introducing <em>Moral Co-Creation</em> — the argument that creativity is a moral practice rather than a purely technical or aesthetic one, and that human intention, interpretive judgement and accountability must stay in the loop when AI is a creative partner.</p></div>
+          <div class="par"><span class="par-label">Outcome</span><p>Presented to an academic panel at the DGHE-approved National Seminar on Machine Learning, K.L. Mehta Dayanand College, and opened to questions from faculty. Presented, not yet published.</p></div>
+          <div class="project-tags"><span class="project-tag">Research writing</span><span class="project-tag">AI ethics</span><span class="project-tag">Public speaking</span></div>
+          <div class="project-links">
+            <a href="assets/ai-ethics-paper.pdf" target="_blank" rel="noopener">Read the paper →</a>
+            <a href="assets/ai-ethics-paper.pdf" download>Download PDF ↓</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     EXPERIENCE — the two internship cards are placeholders.
+     Fill in company, role, dates and bullets, then delete
+     class="needs-input" and the <span class="needs-input-tag"> line.
+     ══════════════════════════════════════════════════════════════ -->
+<section id="experience" class="alt-bg">
+  <div class="section-inner">
+    <p class="eyebrow">Track record</p>
+    <h2 class="section-title">Experience &amp; leadership</h2>
+    <p class="section-desc">Where the work actually happened — with the letters and certificates attached.</p>
+
+    <div class="timeline fade-in">
+
+      <!-- INTERNSHIP 1 — Kritavin -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tl-meta"><span class="tl-org">Kritavin Private Limited</span><span class="tl-date">Jun 2026 – Jul 2026</span></div>
+          <div class="tl-title">Business Analytics &amp; Strategy Intern</div>
+          <div class="tl-desc">
+            <ul>
+              <li>Worked across the company's operational data to surface patterns the team could act on, translating open-ended business questions into defined analyses.</li>
+              <li>Delivered data-driven operational insights and strategy recommendations over the course of the engagement.</li>
+              <li>Commended by the company's director for professional dedication and the practical value of the analysis delivered.</li>
+            </ul>
+          </div>
+          <span class="proof-link" data-lightbox data-src="images/proof/internship-kritavin.jpg" data-caption="Internship certificate — Kritavin Private Limited">📄 View certificate</span>
+        </div>
+      </div>
+
+      <!-- INTERNSHIP 2 — BWS -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tl-meta"><span class="tl-org">Business Web Solutions (BWS)</span><span class="tl-date">Jun 2026 – Jul 2026</span></div>
+          <div class="tl-title">Front-End Web Development Intern</div>
+          <div class="tl-desc">
+            <ul>
+              <li>Completed a one-month structured programme covering HTML, CSS, JavaScript, jQuery, Bootstrap and React.</li>
+              <li>Built and shipped module projects against each set of requirements, marked above satisfactory across the internship.</li>
+              <li>Useful in analytics work: I can read the front end a dashboard sits behind, and build my own web deliverables — this portfolio included.</li>
+            </ul>
+          </div>
+          <span class="proof-link" data-lightbox data-src="images/proof/internship-bws.jpg" data-caption="Internship certificate — Business Web Solutions">📄 View certificate</span>
+        </div>
+      </div>
+
+      <!-- REAL EXPERIENCE -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tl-meta"><span class="tl-org">K.C. Dhyani Catering Service</span><span class="tl-date">Jan 2024 – Dec 2024</span></div>
+          <div class="tl-title">Operations &amp; Accounts Assistant</div>
+          <div class="tl-desc">
+            <ul>
+              <li>Ran daily operations and inventory tracking in Excel, coordinating directly with clients through delivery.</li>
+              <li>Handled GST invoicing and expense tracking, and prepared GeM (Government e-Marketplace) tender documentation.</li>
+              <li>Introduced UPI and digital payment options, opening the business to cashless customers it had previously been turning away — revenue grew roughly 15% over the period.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tl-meta"><span class="tl-org">MoE's Innovation Cell &amp; AICTE</span><span class="tl-date">2025 – 2026</span></div>
+          <div class="tl-title">Innovation Ambassador</div>
+          <div class="tl-desc">Selected as an Innovation Ambassador under the Institution's Innovation Council, representing the university in the national innovation and entrepreneurship programme.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tl-meta"><span class="tl-org">Asian Business School, Noida</span><span class="tl-date">Feb 2026</span></div>
+          <div class="tl-title">Team Leader — Promulgare National Case Competition</div>
+          <div class="tl-desc">Led a cross-functional student team through a national case analysis competition: broke down the business scenario, assigned the analysis, and presented data-backed recommendations to a judging panel.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tl-meta"><span class="tl-org">Manav Rachna University</span><span class="tl-date">2025 – 2026</span></div>
+          <div class="tl-title">Coordinator, CaseCraft 2026 &amp; MDP Student Organiser</div>
+          <div class="tl-desc">Coordinated university outreach and participation logistics for CaseCraft 2026, and organised the 6th Management Development Program on Managerial Decision Making for industry executives and faculty.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tl-meta"><span class="tl-org">ISACA New Delhi Chapter</span><span class="tl-date">Nov 2025</span></div>
+          <div class="tl-title">Outstanding Volunteer — Annual Summit 2025</div>
+          <div class="tl-desc">Recognised as Outstanding Volunteer at ISACA's Annual Summit, with exposure to IT governance, audit and cybersecurity practice.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     CERTIFICATES
+     To add one: copy a .cert-card block, change data-cat
+     (ai / data / leadership / research), the image filename and text.
+     Images go in images/certificates/
+     ══════════════════════════════════════════════════════════════ -->
+<section id="certificates">
+  <div class="section-inner">
+    <p class="eyebrow">Credentials</p>
+    <h2 class="section-title">Certifications &amp; recognition</h2>
+    <p class="section-desc">Click any certificate to view it full size.</p>
+
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="data">Data &amp; BI</button>
+      <button class="filter-btn" data-filter="ba">Business analysis</button>
+      <button class="filter-btn" data-filter="finance">Finance</button>
+      <button class="filter-btn" data-filter="ai">AI &amp; tech</button>
+      <button class="filter-btn" data-filter="research">Research</button>
+      <button class="filter-btn" data-filter="leadership">Leadership</button>
+    </div>
+
+    <div class="cert-grid" id="certGrid">
+
+      <!-- ─── DATA & BI ─── -->
+      <div class="cert-card fade-in" data-cat="data">
+        <div class="cert-thumb" data-lightbox data-caption="Power BI: Top Skills — LinkedIn Learning">
+          <img src="images/certificates/powerbi.jpg" alt="Power BI certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Power BI: Top Skills</h4><p class="cert-issuer">LinkedIn Learning</p><div class="cert-date">2025</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="data">
+        <div class="cert-thumb" data-lightbox data-caption="MySQL for Data Analysis — LinkedIn Learning">
+          <img src="images/certificates/mysql-analysis.jpg" alt="MySQL for data analysis certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>MySQL for Data Analysis</h4><p class="cert-issuer">LinkedIn Learning</p><div class="cert-date">2025</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="data">
+        <div class="cert-thumb" data-lightbox data-caption="MySQL Essential Training — LinkedIn Learning">
+          <img src="images/certificates/mysql-essential.jpg" alt="MySQL essential training certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>MySQL Essential Training</h4><p class="cert-issuer">LinkedIn Learning</p><div class="cert-date">2025</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="data">
+        <div class="cert-thumb" data-lightbox data-caption="Data Visualisation &amp; Storytelling — LinkedIn Learning">
+          <img src="images/certificates/data-viz.jpg" alt="Data visualisation certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Data Visualisation &amp; Storytelling</h4><p class="cert-issuer">LinkedIn Learning</p><div class="cert-date">2025</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="data">
+        <div class="cert-thumb" data-lightbox data-caption="Python Quick Start — LinkedIn Learning">
+          <img src="images/certificates/python-quickstart.jpg" alt="Python quick start certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Python Quick Start</h4><p class="cert-issuer">LinkedIn Learning</p><div class="cert-date">2025</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="data">
+        <div class="cert-thumb" data-lightbox data-caption="Python in Excel — LinkedIn Learning">
+          <img src="images/certificates/python-excel.jpg" alt="Python in Excel certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Python in Excel</h4><p class="cert-issuer">LinkedIn Learning</p><div class="cert-date">2025</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="data">
+        <div class="cert-thumb" data-lightbox data-caption="MS Excel Using AI — OfficeMaster">
+          <img src="images/certificates/excel-ai.jpg" alt="Excel using AI certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>MS Excel Using AI</h4><p class="cert-issuer">OfficeMaster — 200+ formulas, dashboards, macros &amp; VBA</p><div class="cert-date">Feb 2026</div></div>
+      </div>
+
+      <!-- ─── BUSINESS ANALYSIS ─── -->
+      <div class="cert-card fade-in" data-cat="ba">
+        <div class="cert-thumb" data-lightbox data-caption="Agile Business Analysis — LinkedIn Learning">
+          <img src="images/certificates/agile-ba.jpg" alt="Agile business analysis certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Agile Business Analysis</h4><p class="cert-issuer">LinkedIn Learning</p><div class="cert-date">2025</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="ba">
+        <div class="cert-thumb" data-lightbox data-caption="Digital Business Analysis — LinkedIn Learning">
+          <img src="images/certificates/digital-ba.jpg" alt="Digital business analysis certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Digital Business Analysis</h4><p class="cert-issuer">LinkedIn Learning</p><div class="cert-date">2025</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="ba">
+        <div class="cert-thumb" data-lightbox data-caption="Fundamentals of Business Process Mapping — LinkedIn Learning">
+          <img src="images/certificates/process-mapping.jpg" alt="Business process mapping certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Business Process Mapping</h4><p class="cert-issuer">LinkedIn Learning</p><div class="cert-date">2025</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="ba">
+        <div class="cert-thumb" data-lightbox data-caption="Quantitative Marketing Research — LinkedIn Learning">
+          <img src="images/certificates/market-research.jpg" alt="Quantitative market research certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Quantitative Marketing Research</h4><p class="cert-issuer">LinkedIn Learning</p><div class="cert-date">2025</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="ba">
+        <div class="cert-thumb" data-lightbox data-caption="Introduction to Risk Management — LinkedIn Learning">
+          <img src="images/certificates/risk-management.jpg" alt="Risk management certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Introduction to Risk Management</h4><p class="cert-issuer">LinkedIn Learning</p><div class="cert-date">2025</div></div>
+      </div>
+
+      <!-- ─── FINANCE ─── -->
+      <div class="cert-card fade-in" data-cat="finance">
+        <div class="cert-thumb" data-lightbox data-caption="Corporate Financial Statement Analysis — LinkedIn Learning">
+          <img src="images/certificates/financial-stmt.jpg" alt="Financial statement analysis certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Corporate Financial Statement Analysis</h4><p class="cert-issuer">LinkedIn Learning</p><div class="cert-date">2025</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="finance">
+        <div class="cert-thumb" data-lightbox data-caption="Understanding Financial Ratios — LinkedIn Learning">
+          <img src="images/certificates/financial-ratios.jpg" alt="Financial ratios certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Understanding Financial Ratios</h4><p class="cert-issuer">LinkedIn Learning</p><div class="cert-date">2025</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="finance">
+        <div class="cert-thumb" data-lightbox data-caption="Financial Literacy, Kona Kona Shiksha — NISM &amp; Kotak Securities">
+          <img src="images/certificates/nism.jpg" alt="NISM financial literacy certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Financial Literacy — scored 90%</h4><p class="cert-issuer">NISM · Kona Kona Shiksha, a Kotak Securities CSR initiative</p><div class="cert-date">Sep 2025</div></div>
+      </div>
+
+      <!-- ─── AI &amp; TECH ─── -->
+      <div class="cert-card fade-in" data-cat="ai">
+        <div class="cert-thumb" data-lightbox data-caption="Git and GitHub Workshop — IEEE Student Branch, Manav Rachna University">
+          <img src="images/certificates/git-github.jpg" alt="Git and GitHub workshop certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Git &amp; GitHub Workshop</h4><p class="cert-issuer">IEEE Student Branch, Manav Rachna University</p><div class="cert-date">Jan 2026</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="ai">
+        <div class="cert-thumb" data-lightbox data-caption="Student AI Masterclass — Google for Education AI Implementation Program 2026">
+          <img src="images/certificates/google-ai.jpg" alt="Google for Education AI certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Student AI Masterclass</h4><p class="cert-issuer">Google for Education AI Implementation Program, upEducators</p><div class="cert-date">Feb 2026</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="ai">
+        <div class="cert-thumb" data-lightbox data-caption="Digital Productivity with AI — UNICEF &amp; YuWaah!">
+          <img src="images/certificates/unicef-ai.jpg" alt="Digital productivity with AI certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Digital Productivity with AI — scored 100%</h4><p class="cert-issuer">UNICEF &amp; YuWaah! (Generation Unlimited) — 10 hours</p><div class="cert-date">Nov 2025</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="ai">
+        <div class="cert-thumb" data-lightbox data-caption="ChatGPT and Python — LinkedIn Learning">
+          <img src="images/certificates/chatgpt-python.jpg" alt="ChatGPT and Python certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>ChatGPT &amp; Python</h4><p class="cert-issuer">LinkedIn Learning</p><div class="cert-date">2025</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="ai">
+        <div class="cert-thumb" data-lightbox data-caption="SCADA (MC Works64) — Mitsubishi Electric India &amp; CVR College of Engineering">
+          <img src="images/certificates/scada.jpg" alt="SCADA course certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>SCADA (MC Works64)</h4><p class="cert-issuer">Mitsubishi Electric India · CVR College of Engineering, Hyderabad</p><div class="cert-date">Feb 2026</div></div>
+      </div>
+
+      <!-- ─── RESEARCH ─── -->
+      <div class="cert-card fade-in" data-cat="research">
+        <div class="cert-thumb" data-lightbox data-caption="Paper presented — National Seminar on Machine Learning, K.L. Mehta Dayanand College">
+          <img src="images/certificates/paper-presenter.jpg" alt="Paper presentation certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Paper Presenter — National Seminar</h4><p class="cert-issuer">"Machine Learning: Bridging Disciplines, Breaking Boundaries", K.L. Mehta Dayanand College (DGHE approved)</p><div class="cert-date">Feb 2026</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="research">
+        <div class="cert-thumb" data-lightbox data-caption="Professional Development Program on Research Excellence — Asian Business School">
+          <img src="images/certificates/abs-pdp.jpg" alt="Research excellence PDP certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Research Excellence in the Digital Era</h4><p class="cert-issuer">Advanced research methodology, analytics &amp; scholarly publishing — Asian Business School, Noida</p><div class="cert-date">Jul 2026</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="research">
+        <div class="cert-thumb" data-lightbox data-caption="Innovation Project on Socio-Cultural Assimilation — Shaheed Bhagat Singh Evening College, DU">
+          <img src="images/certificates/sbs-research.jpg" alt="Innovation project certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>IQAC Innovation Project — Team Member</h4><p class="cert-issuer">Socio-cultural assimilation research, Shaheed Bhagat Singh Evening College, University of Delhi</p><div class="cert-date">Project RICGP/0021/SBSE/2021</div></div>
+      </div>
+
+      <!-- ─── LEADERSHIP ─── -->
+      <div class="cert-card fade-in" data-cat="leadership">
+        <div class="cert-thumb" data-lightbox data-caption="Innovation Ambassador — MoE's Innovation Cell &amp; AICTE">
+          <img src="images/certificates/innovation-ambassador.jpg" alt="Innovation Ambassador certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Innovation Ambassador</h4><p class="cert-issuer">Institution's Innovation Council, MoE's Innovation Cell &amp; AICTE</p><div class="cert-date">2025 – 2026</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="leadership">
+        <div class="cert-thumb" data-lightbox data-caption="Outstanding Volunteer — ISACA New Delhi Chapter Annual Summit 2025">
+          <img src="images/certificates/isaca.jpg" alt="ISACA volunteer certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Outstanding Volunteer</h4><p class="cert-issuer">ISACA New Delhi Chapter — Annual Summit 2025</p><div class="cert-date">Nov 2025</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="leadership">
+        <div class="cert-thumb" data-lightbox data-caption="Student Organiser — 6th Management Development Program, Manav Rachna University">
+          <img src="images/certificates/mdp.jpg" alt="MDP student organiser certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Student Organiser — MDP</h4><p class="cert-issuer">6th Management Development Program on Managerial Decision Making, School of Business, MRU</p><div class="cert-date">2025</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="leadership">
+        <div class="cert-thumb" data-lightbox data-caption="Promulgare National Case Analysis Competition — Asian Business School, Noida">
+          <img src="images/certificates/promulgare.jpg" alt="Promulgare competition certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Promulgare — National Case Analysis</h4><p class="cert-issuer">Research &amp; Development Cell, Asian Business School, Noida</p><div class="cert-date">Feb 2026</div></div>
+      </div>
+
+      <div class="cert-card fade-in" data-cat="leadership">
+        <div class="cert-thumb" data-lightbox data-caption="Certificate of Appreciation — The Earth Saviours Foundation">
+          <img src="images/certificates/ngo-volunteer.jpg" alt="NGO volunteering certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Volunteer Service</h4><p class="cert-issuer">The Earth Saviours Foundation — shelter for abandoned senior citizens &amp; disabled residents</p><div class="cert-date">2025</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ VOLUNTEERING ══════════════ -->
+<section id="volunteering" class="alt-bg">
+  <div class="section-inner">
+    <p class="eyebrow">Outside the spreadsheet</p>
+    <h2 class="section-title">Community &amp; interests</h2>
+    <div class="vol-grid">
+      <div class="vol-card fade-in">
+        <div class="vol-emoji">🌍</div>
+        <h3>The Earth Saviours Foundation</h3>
+        <p>Volunteered at NGO shelter homes in the Gurgaon–Faridabad belt, supporting abandoned senior citizens and people with disabilities.</p>
+        <span class="vol-tag">Oct 2025</span>
+      </div>
+      <div class="vol-card fade-in">
+        <div class="vol-emoji">✍️</div>
+        <h3>Writing &amp; illustration</h3>
+        <p>Creative writing and concept sketching — the habit that makes me care about how an insight is framed, not just whether it's correct.</p>
+        <span class="vol-tag">Ongoing</span>
+      </div>
+      <div class="vol-card fade-in">
+        <div class="vol-emoji">🗣️</div>
+        <h3>Languages</h3>
+        <p>English (fluent) · Hindi (fluent) · Japanese (beginner, currently learning).</p>
+        <span class="vol-tag">Ongoing</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<section id="contact">
+  <div class="section-inner">
+    <p class="eyebrow">Get in touch</p>
+    <h2 class="section-title">Let's talk data</h2>
+    <p class="lead">I'm open to business analyst and data analyst internships, live project collaborations, and conversations with anyone building something with data. I reply to every message.</p>
+    <div class="contact-links">
+      <a href="mailto:shubhamdhyani101@gmail.com" class="contact-link">✉️ shubhamdhyani101@gmail.com</a>
+      <a href="https://www.linkedin.com/in/shubhamdhyaani/" target="_blank" rel="noopener" class="contact-link">💼 LinkedIn</a>
+      <a href="https://github.com/ShubhamD1001" target="_blank" rel="noopener" class="contact-link">💻 GitHub</a>
+      <a href="assets/Shubham_Dhyani_Resume.pdf" download class="contact-link">📄 Download CV</a>
+      <a href="assets/Shubham_Dhyani_Resume_ATS.pdf" download class="contact-link">📑 CV (ATS version)</a>
+    </div>
+    <p class="contact-note">Based in New Delhi, India · Open to remote and hybrid roles</p>
+  </div>
+</section>
+
+<footer>
+  <p>Built and maintained by <strong>Shubham Dhyani</strong> · MBA (Business Analytics), Manav Rachna University · <span id="year"></span></p>
+</footer>
+
+<!-- ══════════════ LIGHTBOX ══════════════ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close image">✕</button>
+  <img id="lightboxImg" src="" alt="">
+  <p class="lightbox-caption" id="lightboxCaption"></p>
+</div>
+
+<!-- ══════════════ STRUCTURED DATA (helps Google show your name properly) ══════════════ -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Shubham Dhyani",
+  "jobTitle":"Business Analyst",
+  "email":"mailto:shubhamdhyani101@gmail.com",
+  "url":"https://shubhamd1001.github.io/",
+  "image":"https://shubhamd1001.github.io/images/profile.jpg",
+  "address":{"@type":"PostalAddress","addressLocality":"New Delhi","addressCountry":"IN"},
+  "alumniOf":[
+    {"@type":"CollegeOrUniversity","name":"Manav Rachna University"},
+    {"@type":"CollegeOrUniversity","name":"University of Delhi"}
+  ],
+  "knowsAbout":["Business Analysis","Power BI","SQL","Python","Tableau","Data Visualization","Predictive Modelling"],
+  "sameAs":[
+    "https://www.linkedin.com/in/shubhamdhyaani/",
+    "https://github.com/ShubhamD1001"
+  ]
+}
+</script>
+
+<script>
+(function(){
+  'use strict';
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* Missing-image placeholders — shows the expected filename instead of a broken icon */
+  document.querySelectorAll('img[data-fallback]').forEach(function(img){
+    function markMissing(){
+      /* Avatar: swap in a monogram rather than a striped box */
+      if (img.hasAttribute('data-initials')){
+        var mono = document.createElement('div');
+        mono.className = 'avatar-fallback';
+        mono.textContent = img.getAttribute('data-initials');
+        mono.setAttribute('aria-label', img.alt || '');
+        if (img.parentElement) img.parentElement.replaceChild(mono, img);
+        return;
+      }
+      var box = img.parentElement;
+      box.classList.add('img-missing');
+      box.setAttribute('data-file', img.getAttribute('src'));
+      box.removeAttribute('data-lightbox');
+    }
+    img.addEventListener('error', markMissing);
+    if (img.complete && img.naturalWidth === 0) markMissing();
+  });
+
+  /* Lightbox */
+  var lb = document.getElementById('lightbox'),
+      lbImg = document.getElementById('lightboxImg'),
+      lbCap = document.getElementById('lightboxCaption'),
+      lastFocus = null;
+
+  function openLightbox(src, caption){
+    lastFocus = document.activeElement;
+    lbImg.src = src; lbImg.alt = caption || '';
+    lbCap.textContent = caption || '';
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('lightboxClose').focus();
+  }
+  function closeLightbox(){
+    lb.classList.remove('open'); lbImg.src = '';
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+
+  document.addEventListener('click', function(e){
+    var trigger = e.target.closest('[data-lightbox]');
+    if (trigger){
+      var src = trigger.getAttribute('data-src');
+      if (!src){ var inner = trigger.querySelector('img'); if (inner) src = inner.getAttribute('src'); }
+      if (src) openLightbox(src, trigger.getAttribute('data-caption'));
+      return;
+    }
+    if (e.target === lb || e.target.id === 'lightboxClose') closeLightbox();
+  });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && lb.classList.contains('open')) closeLightbox(); });
+
+  /* Certificate filters */
+  var filterBar = document.getElementById('filterBar');
+  if (filterBar){
+    filterBar.addEventListener('click', function(e){
+      var btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      filterBar.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      var f = btn.getAttribute('data-filter');
+      document.querySelectorAll('#certGrid .cert-card').forEach(function(card){
+        card.classList.toggle('hidden', f !== 'all' && card.getAttribute('data-cat') !== f);
+      });
+    });
+  }
+
+  /* Mobile menu */
+  var toggle = document.getElementById('navToggle'), links = document.getElementById('navLinks');
+  toggle.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+    toggle.textContent = open ? '✕' : '☰';
+  });
+  links.addEventListener('click', function(e){
+    if (e.target.tagName === 'A'){ links.classList.remove('open'); toggle.textContent = '☰'; }
+  });
+
+  /* Scroll reveal */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry, i){
+      if (entry.isIntersecting){
+        setTimeout(function(){ entry.target.classList.add('visible'); }, i * 70);
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-in').forEach(function(el){ io.observe(el); });
+
+  /* Active nav link */
+  var navMap = {};
+  document.querySelectorAll('.nav-links a').forEach(function(a){ navMap[a.getAttribute('href').slice(1)] = a; });
+  var spy = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      var link = navMap[entry.target.id];
+      if (!link) return;
+      if (entry.isIntersecting){
+        Object.values(navMap).forEach(function(l){ l.classList.remove('active'); });
+        link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  document.querySelectorAll('section[id]').forEach(function(s){ spy.observe(s); });
+})();
+</script>
+</body>
+</html>

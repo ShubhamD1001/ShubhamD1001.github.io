@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" font-family="DM Sans, Segoe UI, sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B2447"/>
+      <stop offset="55%" stop-color="#123055"/>
+      <stop offset="100%" stop-color="#173F73"/>
+    </linearGradient>
+    <pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0 L0 0 0 40" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg2)"/>
+  <rect width="800" height="450" fill="url(#grid2)"/>
+
+  <text x="48" y="62" fill="#C8963E" font-size="13" letter-spacing="3" font-family="monospace">SUPPLIER RISK MATRIX</text>
+  <text x="48" y="102" fill="#FFFFFF" font-size="30" font-weight="700" font-family="Georgia, serif">Safety Stock &amp; Reorder Point Model</text>
+  <line x1="48" y1="126" x2="752" y2="126" stroke="#FFFFFF" opacity="0.16" stroke-width="1"/>
+
+  <!-- risk quadrant -->
+  <g transform="translate(48,158)">
+    <rect width="352" height="242" rx="10" fill="#FFFFFF" opacity="0.055" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <text x="20" y="30" fill="#9FC0E3" font-size="12" letter-spacing="1.5" font-family="monospace">RISK QUADRANTS</text>
+
+    <!-- axes -->
+    <line x1="46" y1="208" x2="322" y2="208" stroke="#FFFFFF" stroke-opacity="0.28"/>
+    <line x1="46" y1="208" x2="46" y2="50" stroke="#FFFFFF" stroke-opacity="0.28"/>
+    <!-- median reference lines -->
+    <line x1="184" y1="50" x2="184" y2="208" stroke="#FFFFFF" stroke-opacity="0.18" stroke-dasharray="4 4"/>
+    <line x1="46" y1="129" x2="322" y2="129" stroke="#FFFFFF" stroke-opacity="0.18" stroke-dasharray="4 4"/>
+
+    <!-- points: apparel (reliable, low/low), sporting (volatility), furniture (critical) -->
+    <circle cx="98" cy="182" r="15" fill="#4ADE80" opacity="0.75"/>
+    <text x="98" y="187" fill="#06301B" font-size="10" font-weight="700" text-anchor="middle">A</text>
+
+    <circle cx="212" cy="150" r="17" fill="#E5B96C" opacity="0.8"/>
+    <text x="212" y="155" fill="#3A2606" font-size="10" font-weight="700" text-anchor="middle">S</text>
+
+    <circle cx="272" cy="82" r="20" fill="#F26D6D" opacity="0.85"/>
+    <text x="272" y="87" fill="#3E0B0B" font-size="10" font-weight="700" text-anchor="middle">F</text>
+
+    <text x="46" y="230" fill="#8FB0D4" font-size="10" font-family="monospace">LEAD-TIME VOLATILITY →</text>
+  </g>
+
+  <!-- segment table -->
+  <g transform="translate(422,158)">
+    <rect width="330" height="242" rx="10" fill="#FFFFFF" opacity="0.055" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <text x="22" y="30" fill="#9FC0E3" font-size="12" letter-spacing="1.5" font-family="monospace">95% SERVICE LEVEL</text>
+
+    <text x="22" y="58" fill="#8FB0D4" font-size="10" font-family="monospace">SEGMENT</text>
+    <text x="176" y="58" fill="#8FB0D4" font-size="10" font-family="monospace">SS</text>
+    <text x="228" y="58" fill="#8FB0D4" font-size="10" font-family="monospace">ROP</text>
+    <line x1="22" y1="68" x2="308" y2="68" stroke="#FFFFFF" stroke-opacity="0.14"/>
+
+    <circle cx="30" cy="92" r="5" fill="#4ADE80"/>
+    <text x="46" y="96" fill="#E4EEF9" font-size="13">Apparel</text>
+    <text x="176" y="96" fill="#EBC57F" font-size="13" font-family="monospace">46</text>
+    <text x="228" y="96" fill="#EBC57F" font-size="13" font-family="monospace">115</text>
+
+    <circle cx="30" cy="124" r="5" fill="#E5B96C"/>
+    <text x="46" y="128" fill="#E4EEF9" font-size="13">Sporting Goods</text>
+    <text x="176" y="128" fill="#EBC57F" font-size="13" font-family="monospace">49</text>
+    <text x="228" y="128" fill="#EBC57F" font-size="13" font-family="monospace">104</text>
+
+    <circle cx="30" cy="156" r="5" fill="#F26D6D"/>
+    <text x="46" y="160" fill="#E4EEF9" font-size="13">Furniture</text>
+    <text x="176" y="160" fill="#EBC57F" font-size="13" font-family="monospace">44</text>
+    <text x="228" y="160" fill="#EBC57F" font-size="13" font-family="monospace">101</text>
+
+    <line x1="22" y1="180" x2="308" y2="180" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <text x="22" y="203" fill="#CFE0F2" font-size="11.5">Furniture's buffer is driven by supplier</text>
+    <text x="22" y="220" fill="#CFE0F2" font-size="11.5">unreliability, not demand volatility.</text>
+  </g>
+
+  <text x="48" y="428" fill="#7E9CBE" font-size="11" font-family="monospace">SUMMARY GRAPHIC · 12,000 ORDER LINES · FULL PIPELINE ON GITHUB</text>
+</svg>

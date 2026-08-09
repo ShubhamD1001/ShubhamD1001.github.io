@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" font-family="DM Sans, Segoe UI, sans-serif">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B2447"/>
+      <stop offset="55%" stop-color="#123055"/>
+      <stop offset="100%" stop-color="#173F73"/>
+    </linearGradient>
+    <pattern id="grid6" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0 L0 0 0 40" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.06"/>
+    </pattern>
+    <linearGradient id="barg" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#C8963E" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#E5B96C"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg6)"/>
+  <rect width="800" height="450" fill="url(#grid6)"/>
+
+  <text x="48" y="58" fill="#C8963E" font-size="13" letter-spacing="3" font-family="monospace">POWER BI · MySQL · DAX</text>
+  <text x="48" y="97" fill="#FFFFFF" font-size="29" font-weight="700" font-family="Georgia, serif">Sales &amp; Inventory Analytics</text>
+  <line x1="48" y1="118" x2="752" y2="118" stroke="#FFFFFF" opacity="0.16" stroke-width="1"/>
+
+  <!-- KPI strip -->
+  <g transform="translate(48,136)">
+    <rect x="0"   y="0" width="168" height="62" rx="8" fill="#FFFFFF" opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <text x="84" y="30" fill="#C8963E" font-size="21" font-weight="700" font-family="Georgia, serif" text-anchor="middle">8.85M</text>
+    <text x="84" y="48" fill="#9FC0E3" font-size="10.5" text-anchor="middle">Total revenue</text>
+
+    <rect x="180" y="0" width="168" height="62" rx="8" fill="#FFFFFF" opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <text x="264" y="30" fill="#C8963E" font-size="21" font-weight="700" font-family="Georgia, serif" text-anchor="middle">122</text>
+    <text x="264" y="48" fill="#9FC0E3" font-size="10.5" text-anchor="middle">Customers</text>
+
+    <rect x="360" y="0" width="168" height="62" rx="8" fill="#FFFFFF" opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <text x="444" y="30" fill="#C8963E" font-size="21" font-weight="700" font-family="Georgia, serif" text-anchor="middle">105K</text>
+    <text x="444" y="48" fill="#9FC0E3" font-size="10.5" text-anchor="middle">Units sold</text>
+
+    <rect x="540" y="0" width="164" height="62" rx="8" fill="#FFFFFF" opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <text x="622" y="30" fill="#C8963E" font-size="21" font-weight="700" font-family="Georgia, serif" text-anchor="middle">555K</text>
+    <text x="622" y="48" fill="#9FC0E3" font-size="10.5" text-anchor="middle">Units in stock</text>
+  </g>
+
+  <!-- monthly revenue trend -->
+  <g transform="translate(48,218)">
+    <rect width="392" height="182" rx="10" fill="#FFFFFF" opacity="0.055" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <text x="20" y="26" fill="#9FC0E3" font-size="11" letter-spacing="1.4" font-family="monospace">MONTHLY REVENUE</text>
+    <line x1="34" y1="150" x2="368" y2="150" stroke="#FFFFFF" stroke-opacity="0.26"/>
+    <rect x="42"  y="122" width="20" height="28" rx="3" fill="url(#barg)"/>
+    <rect x="68"  y="130" width="20" height="20" rx="3" fill="url(#barg)"/>
+    <rect x="94"  y="118" width="20" height="32" rx="3" fill="url(#barg)"/>
+    <rect x="120" y="134" width="20" height="16" rx="3" fill="url(#barg)"/>
+    <rect x="146" y="124" width="20" height="26" rx="3" fill="url(#barg)"/>
+    <rect x="172" y="116" width="20" height="34" rx="3" fill="url(#barg)"/>
+    <rect x="198" y="120" width="20" height="30" rx="3" fill="url(#barg)"/>
+    <rect x="224" y="112" width="20" height="38" rx="3" fill="url(#barg)"/>
+    <rect x="250" y="106" width="20" height="44" rx="3" fill="url(#barg)"/>
+    <rect x="276" y="100" width="20" height="50" rx="3" fill="url(#barg)"/>
+    <rect x="302" y="62"  width="20" height="88" rx="3" fill="#E5B96C"/>
+    <rect x="328" y="52"  width="20" height="98" rx="3" fill="#E5B96C"/>
+    <text x="292" y="44" fill="#EBC57F" font-size="10.5" font-family="monospace">NOV–DEC = 36%</text>
+    <text x="34" y="168" fill="#8FB0D4" font-size="9.5" font-family="monospace">JAN → DEC</text>
+  </g>
+
+  <!-- inventory mismatch -->
+  <g transform="translate(460,218)">
+    <rect width="292" height="182" rx="10" fill="#FFFFFF" opacity="0.055" stroke="#FFFFFF" stroke-opacity="0.14"/>
+    <text x="20" y="26" fill="#9FC0E3" font-size="11" letter-spacing="1.4" font-family="monospace">STOCK vs DEMAND</text>
+
+    <text x="20" y="58" fill="#E4EEF9" font-size="12">Pont Yacht</text>
+    <rect x="20" y="66" width="72" height="13" rx="3" fill="#F26D6D" opacity="0.85"/>
+    <text x="100" y="77" fill="#CFE0F2" font-size="10.5" font-family="monospace">414 in stock</text>
+    <rect x="20" y="83" width="166" height="13" rx="3" fill="#5B8CBE" opacity="0.85"/>
+    <text x="194" y="94" fill="#CFE0F2" font-size="10.5" font-family="monospace">958 sold</text>
+
+    <text x="20" y="122" fill="#E4EEF9" font-size="12">F/A 18 Hornet 1/72</text>
+    <rect x="20" y="130" width="88" height="13" rx="3" fill="#F26D6D" opacity="0.85"/>
+    <text x="116" y="141" fill="#CFE0F2" font-size="10.5" font-family="monospace">551 in stock</text>
+    <rect x="20" y="147" width="172" height="13" rx="3" fill="#5B8CBE" opacity="0.85"/>
+    <text x="200" y="158" fill="#CFE0F2" font-size="10.5" font-family="monospace">1,047 sold</text>
+
+    <text x="20" y="176" fill="#EBC57F" font-size="10.5">Best sellers are the thinnest stocked.</text>
+  </g>
+</svg>
