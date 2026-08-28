@@ -51,7 +51,7 @@
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
 body{
   font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   background:var(--paper);color:var(--ink);
@@ -82,26 +82,20 @@ section{padding:6.5rem 5%}
 /* ── NAV ── */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:200;
-  background:transparent;border-bottom:1px solid transparent;
-  padding:0 5%;height:76px;
+  background:rgba(255,255,255,.96);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  padding:0 5%;height:72px;
   display:flex;align-items:center;justify-content:space-between;
-  transition:background .35s ease,border-color .35s ease,height .35s ease,box-shadow .35s ease;
+  transition:height .3s ease,box-shadow .3s ease;
 }
-nav.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(16px);
-  border-bottom-color:var(--border);height:66px;box-shadow:0 1px 20px rgba(11,36,71,.06)}
-nav .nav-logo{color:#fff}
-nav .nav-links a{color:rgba(255,255,255,.75)}
-nav .nav-links a:hover,nav .nav-links a.active{color:#fff}
-nav .nav-cta{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.34)}
-nav .nav-cta:hover{background:rgba(255,255,255,.24)}
-nav .nav-toggle{color:#fff;border-color:rgba(255,255,255,.35)}
-nav.scrolled .nav-logo{color:var(--navy-900)}
-nav.scrolled .nav-links a{color:var(--muted)}
-nav.scrolled .nav-links a:hover,nav.scrolled .nav-links a.active{color:var(--navy-900)}
-nav.scrolled .nav-cta{background:var(--navy-900);border-color:var(--navy-900)}
-nav.scrolled .nav-cta:hover{background:var(--navy-700)}
-nav.scrolled .nav-toggle{color:var(--navy-900);border-color:var(--border)}
-nav.scrolled .nav-links{background:#fff}
+nav.scrolled{height:64px;box-shadow:0 1px 20px rgba(11,36,71,.08)}
+nav .nav-logo{color:var(--navy-900)}
+nav .nav-links a{color:var(--muted)}
+nav .nav-links a:hover,nav .nav-links a.active{color:var(--navy-900)}
+nav .nav-cta{background:var(--navy-900);border:1px solid var(--navy-900);color:#fff}
+nav .nav-cta:hover{background:var(--navy-700);border-color:var(--navy-700)}
+nav .nav-toggle{color:var(--navy-900);border-color:var(--border)}
+nav .nav-links{background:#fff}
 .nav-logo{
   font-family:'Fraunces',Georgia,serif;font-size:1.25rem;font-weight:700;
   color:var(--navy-900);letter-spacing:-.3px;text-decoration:none;
@@ -130,7 +124,7 @@ nav.scrolled .nav-links{background:#fff}
 #contact,.band-dark{position:relative;overflow:hidden}
 #hero{
   min-height:100vh;display:flex;align-items:center;
-  padding:132px 5% 80px;position:relative;overflow:hidden;
+  padding:118px 5% 80px;position:relative;overflow:hidden;
   background:linear-gradient(140deg,#0B2447 0%,#123055 45%,#173F73 100%);
   color:#fff;
 }
@@ -510,7 +504,7 @@ footer{border-top:1px solid rgba(255,255,255,.07);letter-spacing:.01em}
 @media(max-width:760px){
   section{padding:4.2rem 6%}
   .section-desc{margin-left:0}
-  #hero{padding:100px 6% 60px}
+  #hero{padding:104px 6% 60px}
   .nav-toggle{display:block}
   .nav-links{
     position:absolute;top:66px;left:0;right:0;flex-direction:column;gap:0;
