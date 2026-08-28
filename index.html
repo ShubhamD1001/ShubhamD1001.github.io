@@ -24,7 +24,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -43,14 +43,15 @@
   --paper-off:#F5F8FC;
   --ok:#1F8A5B;
   --warn:#B4761A;
-  --shadow-sm:0 1px 2px rgba(11,36,71,.06), 0 4px 12px rgba(11,36,71,.05);
-  --shadow-md:0 8px 28px rgba(11,36,71,.10);
-  --shadow-lg:0 24px 60px rgba(11,36,71,.16);
+  --shadow-sm:0 1px 1px rgba(11,36,71,.04),0 2px 6px rgba(11,36,71,.04),0 8px 20px rgba(11,36,71,.04);
+  --shadow-md:0 2px 4px rgba(11,36,71,.05),0 8px 20px rgba(11,36,71,.07),0 20px 44px rgba(11,36,71,.07);
+  --shadow-lg:0 4px 10px rgba(11,36,71,.08),0 20px 48px rgba(11,36,71,.12),0 48px 100px rgba(11,36,71,.14);
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
   --maxw:1160px;
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-text-size-adjust:100%}
 body{
   font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   background:var(--paper);color:var(--ink);
@@ -68,26 +69,41 @@ a{color:var(--navy-500)}
   color:var(--gold);font-weight:500;margin-bottom:.7rem;
 }
 .section-title{
-  font-family:'Playfair Display',Georgia,serif;
-  font-size:clamp(1.9rem,3.4vw,2.7rem);
-  font-weight:700;line-height:1.15;letter-spacing:-.5px;
+  font-family:'Fraunces',Georgia,serif;
+  font-size:clamp(2rem,3.6vw,2.95rem);
+  font-weight:600;line-height:1.1;letter-spacing:-1.1px;
   color:var(--navy-900);margin-bottom:.8rem;
 }
-.section-desc{font-size:1rem;color:var(--muted);max-width:62ch;margin-bottom:3rem}
+.section-desc{font-size:1.02rem;color:var(--muted);max-width:64ch;margin-bottom:3.4rem;margin-left:calc(.78rem + 1.1rem)}
 .section-inner{max-width:var(--maxw);margin:0 auto;width:100%}
-section{padding:5.5rem 5%}
+section{padding:6.5rem 5%}
 .alt-bg{background:var(--paper-off);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 
 /* ── NAV ── */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:200;
-  background:rgba(255,255,255,.93);backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--border);
-  padding:0 5%;height:68px;
+  background:transparent;border-bottom:1px solid transparent;
+  padding:0 5%;height:76px;
   display:flex;align-items:center;justify-content:space-between;
+  transition:background .35s ease,border-color .35s ease,height .35s ease,box-shadow .35s ease;
 }
+nav.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(16px);
+  border-bottom-color:var(--border);height:66px;box-shadow:0 1px 20px rgba(11,36,71,.06)}
+nav .nav-logo{color:#fff}
+nav .nav-links a{color:rgba(255,255,255,.75)}
+nav .nav-links a:hover,nav .nav-links a.active{color:#fff}
+nav .nav-cta{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.34)}
+nav .nav-cta:hover{background:rgba(255,255,255,.24)}
+nav .nav-toggle{color:#fff;border-color:rgba(255,255,255,.35)}
+nav.scrolled .nav-logo{color:var(--navy-900)}
+nav.scrolled .nav-links a{color:var(--muted)}
+nav.scrolled .nav-links a:hover,nav.scrolled .nav-links a.active{color:var(--navy-900)}
+nav.scrolled .nav-cta{background:var(--navy-900);border-color:var(--navy-900)}
+nav.scrolled .nav-cta:hover{background:var(--navy-700)}
+nav.scrolled .nav-toggle{color:var(--navy-900);border-color:var(--border)}
+nav.scrolled .nav-links{background:#fff}
 .nav-logo{
-  font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;
+  font-family:'Fraunces',Georgia,serif;font-size:1.25rem;font-weight:700;
   color:var(--navy-900);letter-spacing:-.3px;text-decoration:none;
 }
 .nav-logo span{color:var(--gold)}
@@ -107,9 +123,14 @@ nav{
 .nav-toggle{display:none;background:none;border:1px solid var(--border);border-radius:6px;padding:7px 10px;cursor:pointer;color:var(--navy-900);font-size:1.1rem;line-height:1}
 
 /* ── HERO ── */
+#hero::after,#contact::after,.band-dark::after{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:var(--grain);opacity:.05;mix-blend-mode:overlay;
+}
+#contact,.band-dark{position:relative;overflow:hidden}
 #hero{
   min-height:100vh;display:flex;align-items:center;
-  padding:110px 5% 70px;position:relative;overflow:hidden;
+  padding:132px 5% 80px;position:relative;overflow:hidden;
   background:linear-gradient(140deg,#0B2447 0%,#123055 45%,#173F73 100%);
   color:#fff;
 }
@@ -135,16 +156,16 @@ nav{
 .hero-tag::before{content:'';width:7px;height:7px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 0 rgba(74,222,128,.6);animation:pulse 2.4s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 8px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
 #hero h1{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(2.6rem,5.6vw,4.2rem);line-height:1.05;
-  font-weight:700;letter-spacing:-1.5px;margin-bottom:1.1rem;
+  font-family:'Fraunces',Georgia,serif;
+  font-size:clamp(2.9rem,6.2vw,4.9rem);line-height:.98;
+  font-weight:600;letter-spacing:-2.2px;margin-bottom:1.2rem;
 }
 #hero h1 em{font-style:normal;color:var(--gold)}
 .hero-role{
   font-family:'JetBrains Mono',monospace;font-size:.85rem;letter-spacing:.1em;
   color:#9FC0E3;text-transform:uppercase;margin-bottom:1rem;
 }
-.hero-subtitle{font-size:1.06rem;color:#D6E4F5;font-weight:300;line-height:1.75;margin-bottom:1.8rem;max-width:52ch}
+.hero-subtitle{font-size:1.09rem;color:#D6E4F5;font-weight:300;line-height:1.8;margin-bottom:2rem;max-width:50ch}
 .hero-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2.2rem}
 .chip{
   background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
@@ -168,11 +189,20 @@ nav{
 
 /* hero card */
 .hero-card{
-  background:rgba(255,255,255,.055);
+  background:linear-gradient(160deg,rgba(255,255,255,.085),rgba(255,255,255,.03));
   border:1px solid rgba(255,255,255,.16);
-  border-radius:14px;padding:1.8rem;
+  border-radius:14px;padding:2rem;
   backdrop-filter:blur(10px);
   box-shadow:var(--shadow-lg);
+  position:relative;
+}
+.hero-card::before{
+  content:'';position:absolute;top:0;left:2rem;right:2rem;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(200,150,62,.75),transparent);
+}
+.ledger-label{
+  font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.18em;
+  text-transform:uppercase;color:#7E9CBE;margin-bottom:.9rem;
 }
 .hero-card-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:1.2rem;border-bottom:1px solid rgba(255,255,255,.16)}
 .avatar{
@@ -185,26 +215,22 @@ nav{
   border:2px solid rgba(200,150,62,.6);
   background:linear-gradient(135deg,var(--navy-500),var(--navy-300));
   display:flex;align-items:center;justify-content:center;
-  font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#fff;
+  font-family:'Fraunces',Georgia,serif;font-size:1.5rem;font-weight:700;color:#fff;
   letter-spacing:.5px;
 }
 .hero-card-header h3{font-size:1.02rem;font-weight:600;color:#fff;letter-spacing:-.2px}
 .hero-card-header p{font-size:.8rem;color:#A8C4E2;font-weight:300}
-.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:1.6rem}
-.stat-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:9px;padding:.9rem .6rem;text-align:center}
-.stat-num{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;color:var(--gold);line-height:1.1}
-.stat-label{font-size:.7rem;color:#A8C4E2;margin-top:3px;letter-spacing:.03em}
-.evidence-list{display:flex;flex-direction:column;gap:.55rem}
+.evidence-list{display:flex;flex-direction:column;gap:.8rem}
 .evidence-row{
-  display:flex;gap:.9rem;align-items:baseline;
-  padding-bottom:.55rem;border-bottom:1px solid rgba(255,255,255,.09);
+  display:flex;gap:1rem;align-items:baseline;
+  padding-bottom:.8rem;border-bottom:1px solid rgba(255,255,255,.09);
 }
 .evidence-row:last-child{border-bottom:none;padding-bottom:0}
 .ev-tool{
-  font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.06em;
-  color:var(--gold);flex:0 0 78px;text-transform:uppercase;line-height:1.5;
+  font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.08em;
+  color:var(--gold);flex:0 0 84px;text-transform:uppercase;line-height:1.6;
 }
-.ev-proof{font-size:.81rem;color:#CFE0F2;line-height:1.5;font-weight:300}
+.ev-proof{font-size:.855rem;color:#DCE9F7;line-height:1.62;font-weight:300}
 
 /* ── ABOUT ── */
 .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3.5rem;align-items:start}
@@ -243,7 +269,7 @@ nav{
   font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.14em;
   text-transform:uppercase;color:var(--gold);font-weight:500;display:block;margin-bottom:2px;
 }
-.par p{font-size:.9rem;color:#41556C;line-height:1.62}
+.par p{font-size:.9rem;color:#41556C;line-height:1.62;text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
 .project-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:1rem}
 .project-tag{border:1px solid var(--border);color:var(--muted);font-size:.72rem;padding:3px 9px;border-radius:4px;background:var(--paper-off)}
 .project-links{display:flex;gap:1rem;margin-top:.9rem;flex-wrap:wrap}
@@ -379,17 +405,115 @@ footer strong{color:#CFE0F2;font-weight:600}
   .fade-in{opacity:1;transform:none}
 }
 
+
+/* ── SCROLL PROGRESS ── */
+#progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:400;
+  background:linear-gradient(90deg,var(--gold),#E5B96C);transition:width .1s linear}
+
+/* ── SECTION HEADERS ── */
+.section-title{letter-spacing:-1px}
+.alt-bg .section-desc{color:#5A6B80}
+
+/* ── ACHIEVEMENTS (horizontal carousel) ── */
+.ach-wrap{position:relative;padding:0 6px}
+.ach-track{
+  display:flex;gap:1.3rem;overflow-x:auto;scroll-behavior:smooth;
+  scroll-snap-type:x mandatory;padding:4px 4px 1.4rem;
+  scrollbar-width:thin;scrollbar-color:var(--navy-300) transparent;
+}
+.ach-track::-webkit-scrollbar{height:6px}
+.ach-track::-webkit-scrollbar-track{background:transparent}
+.ach-track::-webkit-scrollbar-thumb{background:var(--border);border-radius:10px}
+.ach-track::-webkit-scrollbar-thumb:hover{background:var(--navy-300)}
+.ach-card{
+  flex:0 0 340px;scroll-snap-align:start;
+  background:var(--paper);border:1px solid var(--border);border-radius:11px;
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .25s cubic-bezier(.2,.7,.3,1),box-shadow .25s,border-color .25s;
+}
+.ach-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:#BFD2E8}
+.ach-photo{
+  position:relative;aspect-ratio:16/10;overflow:hidden;cursor:zoom-in;
+  background:var(--sky);border-bottom:1px solid var(--border);
+}
+.ach-photo img{width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.2,.7,.3,1)}
+.ach-card:hover .ach-photo img{transform:scale(1.045)}
+.ach-photo::after{
+  content:'\2922';position:absolute;right:10px;bottom:10px;
+  width:28px;height:28px;border-radius:6px;background:rgba(11,36,71,.8);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:.85rem;
+  opacity:0;transition:opacity .25s;
+}
+.ach-photo:hover::after{opacity:1}
+.ach-body{padding:1.25rem 1.35rem 1.4rem;display:flex;flex-direction:column;flex:1}
+.ach-org{
+  font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--navy-500);margin-bottom:.45rem;
+}
+.ach-card h3{font-size:1.02rem;font-weight:600;color:var(--navy-900);line-height:1.35;margin-bottom:.55rem;letter-spacing:-.2px}
+.ach-text{font-size:.88rem;color:#41556C;line-height:1.65;margin-bottom:1rem}
+.ach-foot{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;margin-top:auto}
+.ach-date{font-family:'JetBrains Mono',monospace;font-size:.71rem;color:var(--muted);letter-spacing:.04em}
+.ach-btn{
+  position:absolute;top:calc(50% - 2.2rem);transform:translateY(-50%);z-index:5;
+  width:48px;height:48px;border-radius:50%;cursor:pointer;
+  background:rgba(255,255,255,.96);border:1px solid var(--border);color:var(--navy-800);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 20px rgba(11,36,71,.16);backdrop-filter:blur(6px);
+  transition:background .2s,border-color .2s,color .2s,box-shadow .2s,opacity .25s,visibility .25s;
+}
+.ach-btn svg{width:19px;height:19px;stroke:currentColor;stroke-width:2.1;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.ach-btn:hover:not(:disabled){background:var(--navy-900);border-color:var(--navy-900);color:#fff;box-shadow:0 10px 26px rgba(11,36,71,.28)}
+.ach-btn:disabled{opacity:0;visibility:hidden}
+#achPrev{left:-14px}
+#achNext{right:-14px}
+.ach-wrap::before,.ach-wrap::after{
+  content:'';position:absolute;top:0;bottom:1.4rem;width:56px;z-index:3;pointer-events:none;
+  transition:opacity .25s;
+}
+.ach-wrap::before{left:0;background:linear-gradient(90deg,var(--paper-off),rgba(245,248,252,0))}
+.ach-wrap::after{right:0;background:linear-gradient(270deg,var(--paper-off),rgba(245,248,252,0))}
+.ach-wrap.at-start::before{opacity:0}
+.ach-wrap.at-end::after{opacity:0}
+@media(max-width:760px){
+  .ach-card{flex:0 0 82%}
+  .ach-btn{display:none}
+  .ach-wrap::before,.ach-wrap::after{display:none}
+}
+
+/* ── REFINED CARDS ── */
+.skill-card,.project-card,.cert-card,.vol-card,.timeline-card{
+  transition:transform .25s cubic-bezier(.2,.7,.3,1),box-shadow .25s,border-color .25s;
+}
+.project-card:hover,.cert-card:hover{border-color:#BFD2E8}
+.cert-thumb{background:linear-gradient(160deg,#EDF3FA,#E2ECF7)}
+
+
+/* ── LINK UNDERLINE REVEAL ── */
+.project-links a,.tl-desc a{position:relative;border-bottom:none}
+.project-links a::after{
+  content:'';position:absolute;left:0;bottom:-2px;width:0;height:1px;
+  background:currentColor;transition:width .28s cubic-bezier(.2,.7,.3,1);
+}
+.project-links a:hover::after{width:100%}
+
+/* ── FOOTER ── */
+footer{border-top:1px solid rgba(255,255,255,.07);letter-spacing:.01em}
+
 /* ── RESPONSIVE ── */
 @media(max-width:960px){
   .hero-inner{grid-template-columns:1fr;gap:2.5rem}
   .about-grid{grid-template-columns:1fr;gap:2rem}
+  .ach-row{grid-template-columns:1fr;gap:1.4rem}
+  .ach-row:nth-child(even) .ach-media{order:0}
 }
 @media(max-width:760px){
-  section{padding:4rem 6%}
+  section{padding:4.2rem 6%}
+  .section-desc{margin-left:0}
   #hero{padding:100px 6% 60px}
   .nav-toggle{display:block}
   .nav-links{
-    position:absolute;top:68px;left:0;right:0;flex-direction:column;gap:0;
+    position:absolute;top:66px;left:0;right:0;flex-direction:column;gap:0;
     background:#fff;border-bottom:1px solid var(--border);padding:.5rem 6%;
     box-shadow:var(--shadow-md);display:none;
   }
@@ -397,7 +521,6 @@ footer strong{color:#CFE0F2;font-weight:600}
   .nav-links a{padding:.85rem 0;border-bottom:1px solid var(--border);width:100%}
   .nav-links li:last-child a{border-bottom:none}
   .nav-right{gap:.8rem}
-  .stat-grid{grid-template-columns:1fr 1fr}
   .timeline{padding-left:1.8rem}
   .timeline-dot{left:-1.8rem}
   .hero-cta{width:100%}
@@ -406,6 +529,7 @@ footer strong{color:#CFE0F2;font-weight:600}
 </style>
 </head>
 <body>
+<div id="progress" aria-hidden="true"></div>
 
 <!-- ══════════════ NAV ══════════════ -->
 <nav>
@@ -416,6 +540,7 @@ footer strong{color:#CFE0F2;font-weight:600}
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#achievements">Achievements</a></li>
       <li><a href="#certificates">Credentials</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -430,7 +555,7 @@ footer strong{color:#CFE0F2;font-weight:600}
   <div class="hero-grid-lines" aria-hidden="true"></div>
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-tag">Open to Analyst Internships</div>
+      <div class="hero-tag">Open to Internship &amp; Full-Time Roles</div>
       <h1>Shubham<br><em>Dhyani</em></h1>
       <p class="hero-role">Business Analyst · MBA Business Analytics</p>
       <p class="hero-subtitle">
@@ -460,12 +585,7 @@ footer strong{color:#CFE0F2;font-weight:600}
           <p>MBA (Business Analytics) · Manav Rachna University</p>
         </div>
       </div>
-      <div class="stat-grid">
-        <div class="stat-box"><div class="stat-num">9.17</div><div class="stat-label">MBA SGPA · Sem 2</div></div>
-        <div class="stat-box"><div class="stat-num">226</div><div class="stat-label">Companies analysed</div></div>
-        <div class="stat-box"><div class="stat-num">21K+</div><div class="stat-label">Records modelled</div></div>
-        <div class="stat-box"><div class="stat-num">15%</div><div class="stat-label">Revenue lift delivered</div></div>
-      </div>
+      <p class="ledger-label">Evidence</p>
       <div class="evidence-list">
         <div class="evidence-row"><span class="ev-tool">Power BI</span><span class="ev-proof">Two multi-page dashboards on star-schema models, built with DAX</span></div>
         <div class="evidence-row"><span class="ev-tool">Python</span><span class="ev-proof">Logistic regression at 0.97 ROC-AUC; SciPy safety-stock model</span></div>
@@ -479,18 +599,17 @@ footer strong{color:#CFE0F2;font-weight:600}
 <!-- ══════════════ ABOUT ══════════════ -->
 <section id="about">
   <div class="section-inner">
-    <p class="eyebrow">Who I am</p>
-    <h2 class="section-title">The question comes before the dashboard</h2>
+    <p class="eyebrow">Who I am</p><h2 class="section-title">The question comes before the dashboard</h2>
     <div class="about-grid">
       <div class="about-text fade-in">
         <p>I'm <strong>Shubham Dhyani</strong>, an MBA (Business Analytics) student at Manav Rachna University. My route here ran through B.Com at the University of Delhi and a year running operations and accounts for a family catering business — where I learned that most data problems are really process problems.</p>
-        <p>My work sits at the front end of analytics: framing the business question, cleaning what's actually there rather than what should be, and building the dashboard or model that answers it. That's meant two multi-page <strong>Power BI dashboards</strong> built on star-schema models — one over 226 companies, one connected live to a MySQL database — a <strong>lead scoring model at 0.97 ROC-AUC</strong>, a statistical <strong>safety-stock optimiser</strong> over 12,000 order lines, and a <strong>535-respondent research study</strong> I worked on as a student researcher at the University of Delhi. All four technical projects are public on GitHub, cleaning logs and documentation included.</p>
-        <p>I'm looking for <strong>business analyst and data analyst internships</strong> where I can work on real datasets alongside people who'll tell me when I'm wrong.</p>
+        <p>My work sits at the front end of analytics: framing the business question, cleaning what's actually there rather than what should be, and building the dashboard or model that answers it. In practice, this means taking raw information and turning it into something a business can actually use. I've untangled data from <strong>226 companies</strong> into a clean, multi-page Power BI dashboard. When it came to predicting customer behaviour, I trained a logistic regression lead-scoring model that hit a <strong>0.97 ROC-AUC</strong>, and to tackle supply chain bottlenecks, I built a statistical safety-stock optimiser handling <strong>12,000 order lines</strong>. Even my foundational work at Delhi University, where I synthesised primary research from <strong>535 respondents</strong>, was about finding the story hidden in the noise. I believe in showing the unglamorous side of this process, so all the cleaning logs, documentation, and code for these projects are sitting public on my GitHub.</p>
+        <p>I'm seeking <strong>internships and full-time corporate roles</strong> where I can leverage my knowledge and skill to turn complex data into actionable business strategy.</p>
       </div>
       <div class="about-highlights fade-in">
         <div class="highlight-item">
           <div class="hi-icon">📊</div>
-          <div class="hi-text"><h4>Builds and publishes</h4><p>Four documented analytics projects on GitHub — Power BI dashboards, an ML model and an optimisation pipeline</p></div>
+          <div class="hi-text"><h4>Builds and publishes</h4><p>Four documented analytics projects on GitHub, plus geospatial network design and primary research</p></div>
         </div>
         <div class="highlight-item">
           <div class="hi-icon">🔬</div>
@@ -512,8 +631,7 @@ footer strong{color:#CFE0F2;font-weight:600}
 <!-- ══════════════ SKILLS ══════════════ -->
 <section id="skills" class="alt-bg">
   <div class="section-inner">
-    <p class="eyebrow">Capabilities</p>
-    <h2 class="section-title">Skills &amp; tools</h2>
+    <p class="eyebrow">Capabilities</p><h2 class="section-title">Skills &amp; tools</h2>
     <p class="section-desc">Grouped by what they're actually used for, not by logo count.</p>
     <div class="skills-grid">
       <div class="skill-card fade-in">
@@ -534,7 +652,7 @@ footer strong{color:#CFE0F2;font-weight:600}
       </div>
       <div class="skill-card fade-in">
         <h3>🧪 Research methods</h3>
-        <div class="skill-tags"><span class="skill-tag">Survey design</span><span class="skill-tag">Primary research</span><span class="skill-tag">Secondary research</span><span class="skill-tag">Qualitative coding</span></div>
+        <div class="skill-tags"><span class="skill-tag">Survey design</span><span class="skill-tag">Primary research</span><span class="skill-tag">Secondary research</span><span class="skill-tag">Qualitative coding</span><span class="skill-tag">Geospatial mapping</span></div>
       </div>
       <div class="skill-card fade-in">
         <h3>🤖 AI-assisted workflow</h3>
@@ -551,8 +669,7 @@ footer strong{color:#CFE0F2;font-weight:600}
      ══════════════════════════════════════════════════════════════ -->
 <section id="projects">
   <div class="section-inner">
-    <p class="eyebrow">Selected work</p>
-    <h2 class="section-title">Projects</h2>
+    <p class="eyebrow">Selected work</p><h2 class="section-title">Projects</h2>
     <p class="section-desc">Dashboards, models and research studies built end to end — from the raw data through to the decision someone could make from it. Code and documentation are public.</p>
 
     <div class="projects-grid">
@@ -590,6 +707,27 @@ footer strong{color:#CFE0F2;font-weight:600}
           <div class="par"><span class="par-label">Outcome</span><p>Three findings the business could act on: revenue is heavily back-loaded, with November and December alone contributing about 36% of the year. Two customers account for roughly 15% of all payments across a base of 122 — real concentration risk. And inventory is misaligned with demand: 555K units sitting in stock against 106K sold annually, yet the fastest-moving products are among the thinnest stocked.</p></div>
           <div class="project-tags"><span class="project-tag">Power BI</span><span class="project-tag">MySQL</span><span class="project-tag">DAX</span><span class="project-tag">Inventory analysis</span><span class="project-tag">Revenue analysis</span></div>
           <div class="project-links"><a href="https://github.com/ShubhamD1001/sales-inventory-analytics-dashboard" target="_blank" rel="noopener">View repository →</a></div>
+        </div>
+      </article>
+
+      <!-- ═══ PROJECT — Global Supply Chain Network ═══ -->
+      <article class="project-card fade-in">
+        <div class="project-media" data-lightbox data-src="images/projects/supply-chain-map.jpg" data-caption="NovaTech Global Supply Chain — the interactive Google My Maps model">
+          <img src="images/projects/supply-chain-map.svg" alt="Global supply chain network overview" loading="lazy" data-fallback>
+        </div>
+        <div class="project-header">
+          <h3>Global Supply Chain Mapping &amp; Network Design</h3>
+          <p class="project-meta">Google My Maps · Geospatial modelling · Network design</p>
+        </div>
+        <div class="project-body">
+          <div class="par"><span class="par-label">Problem</span><p>Design a viable global supply chain for a high-end smart device — the NovaTech ProXR — where components come from opposite ends of the world and three continents have to be served. On a spreadsheet the trade-offs stay invisible; the cost of distance only becomes obvious once it is drawn.</p></div>
+          <div class="par"><span class="par-label">Approach</span><p>Built a four-tier geospatial model in Google My Maps: Tier 1 suppliers in Hsinchu (microchips) and Antofagasta (lithium), assembly in Shenzhen, distribution centres in Rotterdam and Los Angeles, and retail hubs in London, New York and Tokyo. Plotted five routes colour-coded by transport mode, then justified each choice against product density and value — air freight for light, high-value chips; ocean for bulk lithium; multimodal transshipment for the final leg into Europe and the US.</p></div>
+          <div class="par"><span class="par-label">Outcome</span><p>The map surfaced two choke points the network cannot avoid — the Strait of Malacca and the Suez Canal. A closure at either adds 10 to 15 days rerouting via the Cape of Good Hope, and the air-freight recovery needed to protect European stock would erase the product's margin. That reframed the design question from cost minimisation to resilience, and produced a five-category mitigation plan covering inventory buffers, geopolitical diversification, multimodal redundancy, supplier dependency and demand forecasting.</p></div>
+          <div class="project-tags"><span class="project-tag">Geospatial analysis</span><span class="project-tag">Supply chain design</span><span class="project-tag">Risk assessment</span><span class="project-tag">Sourcing strategy</span><span class="project-tag">Google My Maps</span></div>
+          <div class="project-links">
+            <a href="https://www.google.com/maps/d/viewer?mid=1KSgWZIoUJ88-P_7eQMH3DztryO9eR0c&amp;ll=34.2319466350072%2C146.6015625&amp;z=2" target="_blank" rel="noopener">Open the live map →</a>
+            <a href="assets/supply-chain-network-report.pdf" target="_blank" rel="noopener">Read the report →</a>
+          </div>
         </div>
       </article>
 
@@ -680,11 +818,10 @@ footer strong{color:#CFE0F2;font-weight:600}
      Fill in company, role, dates and bullets, then delete
      class="needs-input" and the <span class="needs-input-tag"> line.
      ══════════════════════════════════════════════════════════════ -->
-<section id="experience" class="alt-bg">
+<section id="experience">
   <div class="section-inner">
-    <p class="eyebrow">Track record</p>
-    <h2 class="section-title">Experience &amp; leadership</h2>
-    <p class="section-desc">Where the work actually happened — with the letters and certificates attached.</p>
+    <p class="eyebrow">Track record</p><h2 class="section-title">Experience</h2>
+    <p class="section-desc">Roles held, with the certificates attached.</p>
 
     <div class="timeline fade-in">
 
@@ -738,42 +875,108 @@ footer strong{color:#CFE0F2;font-weight:600}
         </div>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card">
-          <div class="tl-meta"><span class="tl-org">MoE's Innovation Cell &amp; AICTE</span><span class="tl-date">2025 – 2026</span></div>
-          <div class="tl-title">Innovation Ambassador</div>
-          <div class="tl-desc">Selected as an Innovation Ambassador under the Institution's Innovation Council, representing the university in the national innovation and entrepreneurship programme.</div>
-        </div>
-      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card">
-          <div class="tl-meta"><span class="tl-org">Asian Business School, Noida</span><span class="tl-date">Feb 2026</span></div>
-          <div class="tl-title">Team Leader — Promulgare National Case Competition</div>
-          <div class="tl-desc">Led a cross-functional student team through a national case analysis competition: broke down the business scenario, assigned the analysis, and presented data-backed recommendations to a judging panel.</div>
-        </div>
-      </div>
+<!-- ══════════════════════════════════════════════════════════════
+     ACHIEVEMENTS & HIGHLIGHTS
+     To add one: copy an <article class="ach-card"> block.
+     ══════════════════════════════════════════════════════════════ -->
+<section id="achievements" class="alt-bg">
+  <div class="section-inner">
+    <p class="eyebrow">Recognition</p><h2 class="section-title">Achievements &amp; highlights</h2>
+    <p class="section-desc">Selections, competitions and recognition outside the coursework. Scroll across, and click any photo to enlarge.</p>
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card">
-          <div class="tl-meta"><span class="tl-org">Manav Rachna University</span><span class="tl-date">2025 – 2026</span></div>
-          <div class="tl-title">Coordinator, CaseCraft 2026 &amp; MDP Student Organiser</div>
-          <div class="tl-desc">Coordinated university outreach and participation logistics for CaseCraft 2026, and organised the 6th Management Development Program on Managerial Decision Making for industry executives and faculty.</div>
-        </div>
-      </div>
+    <div class="ach-wrap">
+      <div class="ach-track" id="achTrack">
 
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-card">
-          <div class="tl-meta"><span class="tl-org">ISACA New Delhi Chapter</span><span class="tl-date">Nov 2025</span></div>
-          <div class="tl-title">Outstanding Volunteer — Annual Summit 2025</div>
-          <div class="tl-desc">Recognised as Outstanding Volunteer at ISACA's Annual Summit, with exposure to IT governance, audit and cybersecurity practice.</div>
-        </div>
-      </div>
+        <article class="ach-card fade-in">
+          <div class="ach-photo" data-lightbox data-src="images/achievements/deans-list.jpg" data-caption="Dean's List felicitation — Manav Rachna University">
+            <img src="images/achievements/deans-list.jpg" alt="Receiving the Dean's List medal and certificate" loading="lazy" data-fallback>
+          </div>
+          <div class="ach-body">
+            <p class="ach-org">Manav Rachna University</p>
+            <h3>Dean's List — consecutive cohort topper</h3>
+            <p class="ach-text">Recognised on the Dean's List for placing top of the MBA cohort in consecutive semesters, awarded with a medal and certificate at a university felicitation.</p>
+            <div class="ach-foot"><span class="ach-date">MBA 2025 – 27</span></div>
+          </div>
+        </article>
 
+        <article class="ach-card fade-in">
+          <div class="ach-photo" data-lightbox data-src="images/achievements/paper-presentation.jpg" data-caption="Presenting the Moral Co-Creation model — National Seminar on Machine Learning, K.L. Mehta Dayanand College, February 2026">
+            <img src="images/achievements/paper-presentation.jpg" alt="Presenting the research paper at a national seminar" loading="lazy" data-fallback>
+          </div>
+          <div class="ach-body">
+            <p class="ach-org">K.L. Mehta Dayanand College · National Seminar</p>
+            <h3>Presented "Ethics of Creativity in the Age of AI"</h3>
+            <p class="ach-text">Co-presented "Ethics of Creativity in the Age of Artificial Intelligence" at the DGHE-approved National Seminar on Machine Learning: Bridging Disciplines, Breaking Boundaries. The paper introduces the <em>Moral Co-Creation</em> model, arguing that responsibility may be distributed across a human-AI system but is never eliminated.</p>
+            <div class="ach-foot">
+              <span class="ach-date">14 Feb 2026</span>
+              <span class="proof-link" data-lightbox data-src="images/achievements/klmehta-seminar.jpg" data-caption="Receiving the paper presenter certificate — National Seminar on Machine Learning: Bridging Disciplines, Breaking Boundaries, 14 February 2026">View ceremony</span>
+            </div>
+          </div>
+        </article>
+
+        
+        <article class="ach-card fade-in">
+          <div class="ach-photo" data-lightbox data-src="images/achievements/promulgare-stage.jpg" data-caption="Presenting &quot;Ethical Governance Under Pressure: Himachal Fertilizer Corporation (A)&quot; — Promulgare 2026, Asian Business School">
+            <img src="images/achievements/promulgare-stage.jpg" alt="Promulgare case competition presentation" loading="lazy" data-fallback>
+          </div>
+          <div class="ach-body">
+            <p class="ach-org">Asian Business School, Noida</p>
+            <h3>Team Leader — Promulgare National Case Competition</h3>
+            <p class="ach-text">Led a five-member cross-functional team through the Viksit Bharat Series case, "Himachal Fertilizer Corporation (A): An Ethical Conundrum", presenting governance recommendations to a judging panel under time pressure.</p>
+            <div class="ach-foot">
+              <span class="ach-date">6 Feb 2026</span>
+              <span class="proof-link" data-lightbox data-src="images/achievements/promulgare-award.jpg" data-caption="Prize ceremony — Promulgare 2026, Research &amp; Development Cell, Asian Business School">View ceremony</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="ach-card fade-in">
+          <div class="ach-photo" data-lightbox data-src="images/achievements/isaca-summit.jpg" data-caption="Volunteer team — ISACA New Delhi Chapter Annual Summit 2025">
+            <img src="images/achievements/isaca-summit.jpg" alt="ISACA Annual Summit volunteer team" loading="lazy" data-fallback>
+          </div>
+          <div class="ach-body">
+            <p class="ach-org">ISACA New Delhi Chapter</p>
+            <h3>Outstanding Volunteer — Annual Summit 2025</h3>
+            <p class="ach-text">Part of the volunteer team running the chapter's annual summit, and recognised as an Outstanding Volunteer. The summit brought exposure to IT governance, audit and cybersecurity practice.</p>
+            <div class="ach-foot"><span class="ach-date">Nov 2025</span></div>
+          </div>
+        </article>
+
+        <article class="ach-card fade-in">
+          <div class="ach-photo" data-lightbox data-src="images/achievements/mdp-organiser.jpg" data-caption="Student organiser — 6th Management Development Program on Managerial Decision Making, Manav Rachna University">
+            <img src="images/achievements/mdp-organiser.jpg" alt="Management Development Program student organiser" loading="lazy" data-fallback>
+          </div>
+          <div class="ach-body">
+            <p class="ach-org">Manav Rachna University</p>
+            <h3>Student Organiser — Management Development Program</h3>
+            <p class="ach-text">Organised the 6th Management Development Program on Managerial Decision Making for industry executives and faculty, and coordinated university outreach for CaseCraft 2026.</p>
+            <div class="ach-foot"><span class="ach-date">2025 – 2026</span></div>
+          </div>
+        </article>
+
+        <article class="ach-card fade-in">
+          <div class="ach-photo" data-lightbox data-src="images/achievements/innovation-ambassador.svg" data-caption="Innovation Ambassador — MoE's Innovation Cell &amp; AICTE">
+            <img src="images/achievements/innovation-ambassador.svg" alt="Innovation Ambassador" loading="lazy" data-fallback>
+          </div>
+          <div class="ach-body">
+            <p class="ach-org">MoE's Innovation Cell &amp; AICTE</p>
+            <h3>Innovation Ambassador</h3>
+            <p class="ach-text">Selected under the Institution's Innovation Council to represent Manav Rachna University in the national innovation and entrepreneurship programme, completing 21 sessions across 21 contact hours of training.</p>
+            <div class="ach-foot"><span class="ach-date">2025 – 2026</span></div>
+          </div>
+        </article>
+
+      </div>
+      <button class="ach-btn" id="achPrev" aria-label="Previous achievements">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 5 8 12 15 19"/></svg>
+      </button>
+      <button class="ach-btn" id="achNext" aria-label="Next achievements">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 5 16 12 9 19"/></svg>
+      </button>
     </div>
   </div>
 </section>
@@ -786,8 +989,7 @@ footer strong{color:#CFE0F2;font-weight:600}
      ══════════════════════════════════════════════════════════════ -->
 <section id="certificates">
   <div class="section-inner">
-    <p class="eyebrow">Credentials</p>
-    <h2 class="section-title">Certifications &amp; recognition</h2>
+    <p class="eyebrow">Credentials</p><h2 class="section-title">Certifications</h2>
     <p class="section-desc">Click any certificate to view it full size.</p>
 
     <div class="filter-bar" id="filterBar">
@@ -803,6 +1005,13 @@ footer strong{color:#CFE0F2;font-weight:600}
     <div class="cert-grid" id="certGrid">
 
       <!-- ─── DATA & BI ─── -->
+      <div class="cert-card fade-in" data-cat="data">
+        <div class="cert-thumb" data-lightbox data-caption="Data Analytics Job Simulation — Deloitte (via Forage)">
+          <img src="images/certificates/deloitte.jpg" alt="Deloitte data analytics job simulation certificate" loading="lazy" data-fallback>
+        </div>
+        <div class="cert-body"><h4>Data Analytics Job Simulation</h4><p class="cert-issuer">Deloitte Australia, via Forage — practical tasks in data analysis and forensic technology</p><div class="cert-date">Jun 2026</div></div>
+      </div>
+
       <div class="cert-card fade-in" data-cat="data">
         <div class="cert-thumb" data-lightbox data-caption="Power BI: Top Skills — LinkedIn Learning">
           <img src="images/certificates/powerbi.jpg" alt="Power BI certificate" loading="lazy" data-fallback>
@@ -1011,8 +1220,7 @@ footer strong{color:#CFE0F2;font-weight:600}
 <!-- ══════════════ VOLUNTEERING ══════════════ -->
 <section id="volunteering" class="alt-bg">
   <div class="section-inner">
-    <p class="eyebrow">Outside the spreadsheet</p>
-    <h2 class="section-title">Community &amp; interests</h2>
+    <p class="eyebrow">Outside the spreadsheet</p><h2 class="section-title">Community &amp; interests</h2>
     <div class="vol-grid">
       <div class="vol-card fade-in">
         <div class="vol-emoji">🌍</div>
@@ -1161,6 +1369,31 @@ footer strong{color:#CFE0F2;font-weight:600}
     });
   }
 
+  /* Achievements carousel */
+  (function(){
+    var track = document.getElementById('achTrack');
+    if (!track) return;
+    var prev = document.getElementById('achPrev'), next = document.getElementById('achNext');
+    function step(){
+      var card = track.querySelector('.ach-card');
+      return card ? card.getBoundingClientRect().width + 21 : 360;
+    }
+    var wrap = track.parentElement;
+    function sync(){
+      var atStart = track.scrollLeft < 8;
+      var atEnd = track.scrollLeft > track.scrollWidth - track.clientWidth - 8;
+      prev.disabled = atStart;
+      next.disabled = atEnd;
+      wrap.classList.toggle('at-start', atStart);
+      wrap.classList.toggle('at-end', atEnd);
+    }
+    prev.addEventListener('click', function(){ track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    next.addEventListener('click', function(){ track.scrollBy({ left:  step(), behavior: 'smooth' }); });
+    track.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+    sync();
+  })();
+
   /* Mobile menu */
   var toggle = document.getElementById('navToggle'), links = document.getElementById('navLinks');
   toggle.addEventListener('click', function(){
@@ -1171,6 +1404,21 @@ footer strong{color:#CFE0F2;font-weight:600}
   links.addEventListener('click', function(e){
     if (e.target.tagName === 'A'){ links.classList.remove('open'); toggle.textContent = '☰'; }
   });
+
+  /* Nav state + scroll progress */
+  var navEl = document.querySelector('nav');
+  var bar = document.getElementById('progress');
+  var ticking = false;
+  window.addEventListener('scroll', function(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+      navEl.classList.toggle('scrolled', window.scrollY > window.innerHeight * 0.72);
+      ticking = false;
+    });
+  }, { passive: true });
 
   /* Scroll reveal */
   var io = new IntersectionObserver(function(entries){

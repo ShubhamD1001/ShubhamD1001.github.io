@@ -89,3 +89,14 @@ One caveat: searching your own name may still surface LinkedIn first. That's nor
 
 ---
 
+## 7. Before you publish — quick checklist
+
+- [ ] All `needs-input` blocks filled in and their amber styling removed
+- [ ] CV saved as `assets/Shubham_Dhyani_Resume.pdf`
+- [ ] Headshot at `images/profile.jpg`
+- [ ] GitHub repo link added to the lead-scoring project
+- [ ] Opened it on your phone to check the layout
+- [ ] Clicked every certificate to confirm the image loads
+- [ ] Read every claim and confirmed you can defend it in an interview
+
+**No phone number is on the site by design.** Public pages get scraped by spam bots. Email and LinkedIn are enough — add it back only if you want it.
