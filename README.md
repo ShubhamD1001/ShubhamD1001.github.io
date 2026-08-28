@@ -72,31 +72,3 @@ Every section is marked with a comment block like `<!-- ══ PROJECTS ══ -
 3. Click **uploading an existing file**, then drag in `index.html` and your `images` and `assets` folders. Commit.
 4. Go to **Settings → Pages**. Under *Source*, pick **Deploy from a branch**, branch `main`, folder `/ (root)`. Save.
 5. Wait 1–2 minutes. Your site is live at **https://shubhamd1001.github.io**
-
-To update later: open the file on GitHub, click the pencil icon, edit, commit. Or drag in a new image to replace an old one. Changes go live in about a minute.
-
----
-
-## 6. Getting it to show up on Google
-
-Being online doesn't mean being indexed. Do these three things:
-
-1. **Google Search Console** — go to [search.google.com/search-console](https://search.google.com/search-console), add `https://shubhamd1001.github.io` as a URL-prefix property, verify with the HTML tag method (paste the tag into `<head>`), then use **URL Inspection → Request Indexing**. Usually live within a few days.
-2. **Link to it from LinkedIn** — add the URL to your LinkedIn profile's Website field and to your featured section. Google follows links, and LinkedIn is a strong signal.
-3. **Add it to your resume, email signature, and GitHub bio.**
-
-One caveat: searching your own name may still surface LinkedIn first. That's normal and fine — what matters is that recruiters can open the link you send them.
-
----
-
-## 7. Before you publish — quick checklist
-
-- [ ] All `needs-input` blocks filled in and their amber styling removed
-- [ ] CV saved as `assets/Shubham_Dhyani_Resume.pdf`
-- [ ] Headshot at `images/profile.jpg`
-- [ ] GitHub repo link added to the lead-scoring project
-- [ ] Opened it on your phone to check the layout
-- [ ] Clicked every certificate to confirm the image loads
-- [ ] Read every claim and confirmed you can defend it in an interview
-
-**No phone number is on the site by design.** Public pages get scraped by spam bots. Email and LinkedIn are enough — add it back only if you want it.
